@@ -1,7 +1,7 @@
 # Crossword Quartet
 
 ## Elevator pitch
-You have 1 minute to find 10 words in the crossword puzzle. Ff you can complete four crosswords in a row, you win! Be warned, the crossword puzzles get larger as you dance through the 4 stages.
+You have 1 minute to find 10 words in the word-search puzzle. If you can complete four word-searches without the timer going out, you win! Be warned, the crossword puzzles get larger as you dance through the 4 stages. You will have one extra-time card you can use if you're in a pinch.
 
 
 
