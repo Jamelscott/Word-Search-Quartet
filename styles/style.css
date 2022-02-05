@@ -1,0 +1,68 @@
+*{
+    background-color: rgb(101, 101, 179);
+}
+
+
+
+
+#main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#container-a {
+    width: 510px;
+    height: 1050px;
+    margin-top: 2em;
+    background-color: rgba(255, 255, 255, 0.603);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container-b {
+    width: 500px;
+    height: 1050px;
+    margin-top: 2em;
+    text-align: center;
+}
+
+/* header style=ing */
+#header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+/* what each block will look like in the crossword */
+.singleBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 2em;
+    width: 2em;
+    background-color: rgba(255, 255, 255, 0.603);
+    
+}
+
+.singleBlockTest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 2em;
+    width: 2em;
+    /* background-color: rgba(34, 103, 163, 0.288); */
+    background-color: rgba(163, 96, 34, 0.288);
+    
+}
+
+/* singe attributes */
+.border {
+    border: 2px solid black;
+}
+.biggerFont{
+    font-size: 20px;
+}
