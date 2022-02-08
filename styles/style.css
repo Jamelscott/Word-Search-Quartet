@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* BUTTON TEXT */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 *{
     text-align: center;
 
@@ -6,7 +8,9 @@
 }
 
 body{
-    background-image: rgb(86, 169, 197);
+    background-color: rgb(137, 170, 170);
+    border: 10px double rgb(180, 99, 44);
+
 }
 
 
@@ -16,16 +20,40 @@ body{
     justify-content: center;
 }
 
-#container-a {
+#container-aLevelOne {
+    width: 466px;
+    height: 473px;
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container-aLevelTwo {
     width: 520px;
     height: 700px;
     margin-top: 2em;
     margin-right: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container-aLevelThree {
+    width: 700px;
+    height: 1100px;
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
     display: flex;
     flex-wrap: wrap;
 }
 
 #container-b {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
     width: 500px;
     margin-top: 2em;
     text-align: center;
@@ -45,19 +73,41 @@ body{
 }
 
 /* what each block will look like in the crossword */
-.singleBlock{
+.singleBlockTestLevelOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 3.5em;
+    width: 3.5em;
+    background-color: rgba(190, 132, 132, 0.603);
+    cursor: pointer;
+    
+}
+.singleBlockLevelOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 3.5em;
+    width: 3.5em;
+    background-color: rgba(255, 255, 255, 0.603);
+    cursor: pointer;
+    
+}
+.singleBlockTestLevelTwo{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    background-color: rgba(255, 255, 255, 0.603);
+    background-color: rgba(190, 132, 132, 0.603);
     cursor: pointer;
     
 }
 
-.singleBlockTest {
+.singleBlockLevelTwo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,12 +115,32 @@ body{
     height: 2em;
     width: 2em;
     /* background-color: rgba(34, 103, 163, 0.288); */
-    background-color: rgba(190, 132, 132, 0.603);
+    background-color: rgba(255, 255, 255, 0.603);
     cursor: pointer;
     
 }
 
-/* singe attributes */
+.singleBlockLevelThree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 2em;
+    width: 2em;
+    /* background-color: rgba(34, 103, 163, 0.288); */
+    background-color: rgba(255, 255, 255, 0.603);
+    cursor: pointer;
+
+}
+ #word-box{
+     margin-top: 4em;
+
+ }
+ #timer-box{
+     height: 75px ;
+ }
+
+/* single attributes */
 .border {
     border: 2px solid black;
 }
@@ -97,7 +167,6 @@ body{
     display: none;
     text-align: center;
     background-color: white;
-    margin-top: 2em;
     width: 200px;
     height: 100px;
     font-size: 30px;
@@ -107,16 +176,64 @@ body{
     display: default;
     text-align: center;
     background-color: white;
-    margin-top: 2em;
     width: 200px;
     height: 100px;
     font-size: 30px;
 }
 
 #timer{
-    font-size: 75px;
+    font-size: 40px;
 }
 
 .winloseText {
     font-size: 40px;
+}
+
+#chooseText {
+    font-size: 100px;
+    display: inline;
+
+}
+
+#header-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: white;
+}
+#icon{
+    height: 200px;
+    width: 200px;
+    display: inline;
+}
+.menu-button{
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+    font-family: 'Fredoka One', cursive;
+    background-color: rgb(204, 200, 200);
+    border-radius: 10px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+#button-div{
+    background-color: white;
+}
+
+#returntoMainButton{
+    width: 250px;
+    height: 100px;
+    font-size: 30px;
+    font-family: 'Fredoka One', cursive;
+    background-color: rgb(204, 200, 200);
+    border-radius: 10px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    text-align: center;
 }
