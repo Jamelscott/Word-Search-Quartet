@@ -14,8 +14,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #C8F2EF;
-    border: 10px double rgb(128, 128, 128);
+    background-color: #ffd6ba;
+    border: 10px solid #555b6e;
     width: 1300px;
     margin: 2em auto; 
 
@@ -164,12 +164,12 @@ body{
  #word-box{
      margin-top: 4em;
      font-family: 'Fredoka One', cursive;
-     color: #BB6464;
+     color: #89b0ae;
      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
  
 
  }
- #timer-box{
+ #timer-box{ 
      margin: 0 auto;
      height: 150px ;
      width: 350px;
@@ -235,6 +235,9 @@ body{
     font-size: 90px;
     font-weight: 200px;
     display: inline;
+    color: #89b0ae;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
 }
 
 #header-div{
@@ -255,19 +258,21 @@ body{
     height: 100px;
     font-size: 50px;
     font-family: 'Fredoka One', cursive;
-    background-color: #CDB699;
+    background-color: #ffd6ba;
     border-radius: 10px;
     margin-left: 1em;
     margin-right: 1em;
     text-align: center;
     white-space: normal;
-    color: #BB6464;
+    color: #bee3db;
     stroke-width: 1px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
 }
 .menu-button:hover{
-background-color: rgb(137, 170, 170);
+background-color: #bee3db;
+color: #ffd6ba;
+
 
 }
 
@@ -300,22 +305,20 @@ background-color: rgb(137, 170, 170);
 #status-box{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-left: 8.5em;
-    padding-right: 8.5em;
+    justify-content: space-evenly;
 }
 .status{
     display: inline;
     font-size: 25px;
     font-family: 'Fredoka One', cursive;
-    margin-left: 2.2em;
-    margin-right: 2.2em;
+
     margin-top: .25em;
+    width: 550px;
 }
 
 #header{
     font-family: 'Fredoka One', cursive;
-    color: #BB6464;
+    color: #89b0ae;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
 }

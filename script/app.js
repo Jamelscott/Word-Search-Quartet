@@ -2405,7 +2405,7 @@ const startGameLevelThree = () => {
     }
   };
 
-  let oneMinTimer = setInterval(timerMinusOne, 10);
+  let oneMinTimer = setInterval(timerMinusOne, 1000);
 };
 
 // GENERATE LETTERS ON BOARD
