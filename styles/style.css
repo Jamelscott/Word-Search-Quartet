@@ -8,21 +8,30 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(137, 170, 170);
-    border: 10px double rgb(180, 99, 44);
+    border: 10px double black;
+    width: 1300px;
+    margin: 2em auto;
 
 }
 
 
 #main-container{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: white;
 }
 
 #container-aLevelOne {
     width: 466px;
-    height: 473px;
+    height: 465px;
     margin-top: 2em;
     margin-right: 2em;
     margin-bottom: 2em;
@@ -32,7 +41,7 @@ body{
 
 #container-aLevelTwo {
     width: 520px;
-    height: 700px;
+    height: 690px;
     margin-top: 2em;
     margin-right: 2em;
     margin-bottom: 2em;
@@ -41,11 +50,11 @@ body{
 }
 
 #container-aLevelThree {
-    width: 700px;
-    height: 1100px;
+    width: 685px;
+    height: 1000px;
     margin-top: 2em;
     margin-right: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3.5em;
     display: flex;
     flex-wrap: wrap;
 }
@@ -68,8 +77,10 @@ body{
     justify-content: center;
     align-items: center;
     row-gap: 10px;
-
+    background-color: white;
     font-family: 'Josefin Sans', sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 /* what each block will look like in the crossword */
@@ -80,7 +91,8 @@ body{
     border: 1px solid black;
     height: 3.5em;
     width: 3.5em;
-    background-color: rgba(190, 132, 132, 0.603);
+    /* background-color: rgba(190, 132, 132, 0.603); */
+    background-color: white;
     cursor: pointer;
     
 }
@@ -91,7 +103,7 @@ body{
     border: 1px solid black;
     height: 3.5em;
     width: 3.5em;
-    background-color: rgba(255, 255, 255, 0.603);
+    background-color: white;
     cursor: pointer;
     
 }
@@ -102,7 +114,8 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    background-color: rgba(190, 132, 132, 0.603);
+    /* background-color: rgba(190, 132, 132, 0.603); */
+    background-color: white;
     cursor: pointer;
     
 }
@@ -114,8 +127,7 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    /* background-color: rgba(34, 103, 163, 0.288); */
-    background-color: rgba(255, 255, 255, 0.603);
+    background-color: white;
     cursor: pointer;
     
 }
@@ -127,10 +139,22 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    /* background-color: rgba(34, 103, 163, 0.288); */
-    background-color: rgba(255, 255, 255, 0.603);
+    background-color: white;
     cursor: pointer;
 
+}
+
+.singleBlockTestLevelThree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 2em;
+    width: 2em;
+    /* background-color: rgba(190, 132, 132, 0.603); */
+    background-color: white;
+    cursor: pointer;
+    
 }
  #word-box{
      margin-top: 4em;
@@ -192,6 +216,7 @@ body{
 #chooseText {
     font-size: 100px;
     display: inline;
+    font-family: 'Josefin Sans', sans-serif;
 
 }
 
@@ -201,6 +226,7 @@ body{
     align-items: center;
     gap: 50px;
     background-color: white;
+    width: 1300px;
 }
 #icon{
     height: 200px;
@@ -220,9 +246,14 @@ body{
     text-align: center;
 
 }
+.menu-button:hover{
+background-color: rgb(137, 170, 170);
+
+}
 
 #button-div{
     background-color: white;
+    width: 1300px;
 }
 
 #returntoMainButton{
