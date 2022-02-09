@@ -6,7 +6,7 @@ const startGameLevelOne = () => {
   let h1Header = document.createElement('h1');
 
   h1Header.setAttribute('id', 'header');
-  h1Header.innerText = 'Crossword Countdown • Breezy';
+  h1Header.innerText = 'Crossword Countdown • Breezy Level';
   headerContainer.setAttribute('id', 'header-container');
 
   document.body.appendChild(headerContainer);
@@ -116,6 +116,7 @@ const startGameLevelOne = () => {
         .classList.add('button-visible');
       timer.innerText = '😢You lost!😢';
       document.querySelector('#startLevel1').style.backgroundColor = 'yellow';
+      document.querySelector('#breezy-status').innerText = "try again"
     }
 
     if (document.querySelectorAll('.biggerFontandStrikethrough').length === 4) {
@@ -130,6 +131,7 @@ const startGameLevelOne = () => {
       timer.innerText = '🏆You won!🏆';
       document.querySelector('#startLevel1').style.backgroundColor =
         'limegreen';
+        document.querySelector('#breezy-status').innerText = "complete!"
     }
   };
 
@@ -206,17 +208,17 @@ let generateNamesOne = () => {
   // SAIL
   //S
   sailS.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
     if (
-      sailS.style.backgroundColor === 'red' &&
-      sailA.style.backgroundColor === 'red' &&
-      sailI.style.backgroundColor === 'red' &&
-      sailL.style.backgroundColor === 'red'
+      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
     ) {
-      sailS.style.backgroundColor = 'green';
-      sailA.style.backgroundColor = 'green';
-      sailI.style.backgroundColor = 'green';
-      sailL.style.backgroundColor = 'green';
+      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -224,17 +226,17 @@ let generateNamesOne = () => {
   });
   //A
   sailA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
     if (
-      sailS.style.backgroundColor === 'red' &&
-      sailA.style.backgroundColor === 'red' &&
-      sailI.style.backgroundColor === 'red' &&
-      sailL.style.backgroundColor === 'red'
+      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
     ) {
-      sailS.style.backgroundColor = 'green';
-      sailA.style.backgroundColor = 'green';
-      sailI.style.backgroundColor = 'green';
-      sailL.style.backgroundColor = 'green';
+      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -242,17 +244,17 @@ let generateNamesOne = () => {
   });
   // I
   sailI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
     if (
-      sailS.style.backgroundColor === 'red' &&
-      sailA.style.backgroundColor === 'red' &&
-      sailI.style.backgroundColor === 'red' &&
-      sailL.style.backgroundColor === 'red'
+      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
     ) {
-      sailS.style.backgroundColor = 'green';
-      sailA.style.backgroundColor = 'green';
-      sailI.style.backgroundColor = 'green';
-      sailL.style.backgroundColor = 'green';
+      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -260,17 +262,17 @@ let generateNamesOne = () => {
   });
   // L
   sailL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
     if (
-      sailS.style.backgroundColor === 'red' &&
-      sailA.style.backgroundColor === 'red' &&
-      sailI.style.backgroundColor === 'red' &&
-      sailL.style.backgroundColor === 'red'
+      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
+      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
     ) {
-      sailS.style.backgroundColor = 'green';
-      sailA.style.backgroundColor = 'green';
-      sailI.style.backgroundColor = 'green';
-      sailL.style.backgroundColor = 'green';
+      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -631,7 +633,7 @@ const startGameLevelTwo = () => {
   let h1Header = document.createElement('h1');
 
   h1Header.setAttribute('id', 'header');
-  h1Header.innerText = 'Crossword Countdown • Tricky';
+  h1Header.innerText = 'Crossword Countdown • Tricky Level';
   headerContainer.setAttribute('id', 'header-container');
 
   document.body.appendChild(headerContainer);
@@ -771,6 +773,7 @@ const startGameLevelTwo = () => {
         .classList.add('button-visible');
       timer.innerText = '😢You lost!😢';
       document.querySelector('#startLevel2').style.backgroundColor = 'yellow';
+      document.querySelector('#tricky-status').innerText = "try again"
     }
 
     if (document.querySelectorAll('.biggerFontandStrikethrough').length === 9) {
@@ -785,6 +788,7 @@ const startGameLevelTwo = () => {
       timer.innerText = '🏆You won!🏆';
       document.querySelector('#startLevel2').style.backgroundColor =
         'limegreen';
+        document.querySelector('#tricky-status').innerText = "complete!"
     }
   };
 
@@ -2222,7 +2226,7 @@ const startGameLevelThree = () => {
   let h1Header = document.createElement('h1');
 
   h1Header.setAttribute('id', 'header');
-  h1Header.innerText = 'Crossword Countdown • Tough';
+  h1Header.innerText = 'Crossword Countdown • Tough Level';
   headerContainer.setAttribute('id', 'header-container');
 
   document.body.appendChild(headerContainer);
@@ -2370,6 +2374,7 @@ const startGameLevelThree = () => {
     timer.innerText = countdownStart + 'sec';
 
     if (countdownStart === 0) {
+      let b = "BREEZY"
       clearInterval(oneMinTimer);
       document
         .getElementById('returntoMainButton')
@@ -2379,6 +2384,7 @@ const startGameLevelThree = () => {
         .classList.add('button-visible');
       timer.innerText = '😢You lost!😢';
       document.querySelector('#startLevel3').style.backgroundColor = 'yellow';
+      document.querySelector('#tough-status').innerText = "try again";
     }
 
     if (
@@ -2395,10 +2401,11 @@ const startGameLevelThree = () => {
       timer.innerText = '🏆You won!🏆';
       document.querySelector('#startLevel3').style.backgroundColor =
         'limegreen';
+      document.querySelector('#tough-status').innerText = "complete!"
     }
   };
 
-  let oneMinTimer = setInterval(timerMinusOne, 1000);
+  let oneMinTimer = setInterval(timerMinusOne, 10);
 };
 
 // GENERATE LETTERS ON BOARD
