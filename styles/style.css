@@ -17,7 +17,7 @@ body{
     align-items: center;
     background-color: #89b0ae;
     border: 10px solid #48494c;
-    width: 1300px;
+    width: 1350px;
     margin: 2em auto; 
     border-radius: 10px;
 
@@ -281,7 +281,7 @@ body{
     align-items: center;
     gap: 50px;
     background-color: white;
-    width: 1300px;
+    width: 1350px;
     padding-top: 1em;
 }
 #icon{
@@ -314,7 +314,7 @@ color: #ffd6ba;
 
 #button-div{
     background-color: white;
-    width: 1300px;
+    width: 1350px;
 }
 
 #returntoMainButton{
@@ -363,7 +363,7 @@ color: #ffd6ba;
 #rules-box{
     display: flex;    
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     font-family: 'Fredoka One', cursive;;
     font-size: 20px;
@@ -392,7 +392,11 @@ color: #ffd6ba;
 
 }
 
-img{
-    display: hidden;
-    margin: 1em 0;
+#vid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;;
+    color: #0000;
 }

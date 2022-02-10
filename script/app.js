@@ -6,7 +6,7 @@ const startGameLevelOne = () => {
   let h1Header = document.createElement('h1');
 
   h1Header.setAttribute('id', 'header');
-  h1Header.innerText = 'Crossword Countdown • Breezy Level';
+  h1Header.innerText = 'WordSearch Countdown • Breezy Level';
   headerContainer.setAttribute('id', 'header-container');
 
   document.body.appendChild(headerContainer);
@@ -88,14 +88,23 @@ const startGameLevelOne = () => {
       document.getElementById('header-container').remove();
       document.getElementById('main-container').remove();
       if (document.querySelector('#breezy-status').innerText === "complete!" && document.querySelector('#tricky-status').innerText === "complete!" && document.querySelector('#tough-status').innerText === "complete!"){
-        document.querySelector("#rules-box").remove();
-        document.createElement("div").setAttribute("id", "#rules-box")
-        let catPhoto = document.createElement("img").setAttribute("id", "somaPhoto")
-        catPhoto.setAttribute("src", "https://placekitten.com/350/350")
-        let newRulesBox = document.querySelector("#rules-box")
-        newRulesBox.appendChild(catPhoto)
-        let catText = document.createElement("p").setAttribute("class", "rules-text").innerText = "Great job, you win!"
-        newRulesBox.appendChild(catText)
+        let videoAte = document.createElement("div")
+        videoAte.style.width = "480px"
+        videoAte.style.marginBottom = ".5em"
+        let iFrame = document.createElement("iFrame")
+        iFrame.setAttribute("allow", "fullscreen")
+        iFrame.setAttribute("frameBorder", "0")
+        iFrame.setAttribute("height", "270")
+        iFrame.setAttribute("src","https://giphy.com/embed/xU7TNYYXP2UWnYUqPC/video")
+        iFrame.setAttribute("width", "480")
+        document.getElementById("vid").appendChild(iFrame)
+        let winText = document.createElement("p")
+        winText.innerText = "🏆 YOU DID IT! 🏆"
+        winText.className = "rules-text"
+        winText.style.color = "black"
+        document.getElementById("vid").appendChild(winText)
+        document.getElementById("rules-box").style.display = "none"
+        
       }
 
       // CHANGE TEXT AT MAIN MENU DEPENDING ON COLOR
@@ -649,7 +658,7 @@ const startGameLevelTwo = () => {
   let h1Header = document.createElement('h1');
 
   h1Header.setAttribute('id', 'header');
-  h1Header.innerText = 'Crossword Countdown • Tricky Level';
+  h1Header.innerText = 'WordSearch Countdown • Tricky Level';
   headerContainer.setAttribute('id', 'header-container');
 
   document.body.appendChild(headerContainer);
@@ -761,6 +770,25 @@ const startGameLevelTwo = () => {
 
       document.getElementById('header-container').remove();
       document.getElementById('main-container').remove();
+      if (document.querySelector('#breezy-status').innerText === "complete!" && document.querySelector('#tricky-status').innerText === "complete!" && document.querySelector('#tough-status').innerText === "complete!"){
+        let videoAte = document.createElement("div")
+        videoAte.style.width = "480px"
+        videoAte.style.marginBottom = ".5em"
+        let iFrame = document.createElement("iFrame")
+        iFrame.setAttribute("allow", "fullscreen")
+        iFrame.setAttribute("frameBorder", "0")
+        iFrame.setAttribute("height", "270")
+        iFrame.setAttribute("src","https://giphy.com/embed/xU7TNYYXP2UWnYUqPC/video")
+        iFrame.setAttribute("width", "480")
+        document.getElementById("vid").appendChild(iFrame)
+        let winText = document.createElement("p")
+        winText.innerText = "🏆 YOU DID IT! 🏆"
+        winText.className = "rules-text"
+        winText.style.color = "black"
+        document.getElementById("vid").appendChild(winText)
+        document.getElementById("rules-box").style.display = "none"
+        
+      }
 
       // CHANGE TEXT AT MAIN MENU DEPENDING ON COLOR
     });
@@ -2248,7 +2276,7 @@ const startGameLevelThree = () => {
   let h1Header = document.createElement('h1');
 
   h1Header.setAttribute('id', 'header');
-  h1Header.innerText = 'Crossword Countdown • Tough Level';
+  h1Header.innerText = 'WordSearch Countdown • Tough Level';
   headerContainer.setAttribute('id', 'header-container');
 
   document.body.appendChild(headerContainer);
@@ -2372,6 +2400,26 @@ const startGameLevelThree = () => {
 
       document.getElementById('header-container').remove();
       document.getElementById('main-container').remove();
+      if (document.querySelector('#breezy-status').innerText === "complete!" && document.querySelector('#tricky-status').innerText === "complete!" && document.querySelector('#tough-status').innerText === "complete!"){
+        let videoAte = document.createElement("div")
+        videoAte.style.width = "480px"
+        videoAte.style.marginBottom = ".5em"
+        let iFrame = document.createElement("iFrame")
+        iFrame.setAttribute("allow", "fullscreen")
+        iFrame.setAttribute("frameBorder", "0")
+        iFrame.setAttribute("height", "270")
+        iFrame.setAttribute("src","https://giphy.com/embed/xU7TNYYXP2UWnYUqPC/video")
+        iFrame.setAttribute("width", "480")
+        document.getElementById("vid").appendChild(iFrame)
+        let winText = document.createElement("p")
+        winText.innerText = "🏆 YOU DID IT! 🏆"
+        winText.className = "rules-text"
+        winText.style.color = "black"
+        document.getElementById("vid").appendChild(winText)
+        document.getElementById("rules-box").style.display = "none"
+
+        
+      }
 
       // CHANGE TEXT AT MAIN MENU DEPENDING ON COLOR
     });
@@ -4729,6 +4777,32 @@ let generateNamesThree = () => {
 // elem.setAttribute('id', 'test');
 // elem.innerText = 'testing';
 // document.body.appendChild(elem);
+
+// window.addEventListener("DOMContentLoaded", ()=>{
+
+//   document.getElementById("vid").style.display = "none"
+
+// })
+// elem.addEventListener("click", function(){
+  
+//     let videoAte = document.createElement("div")
+//     videoAte.style.width = "480px"
+//     videoAte.style.marginBottom = ".5em"
+//     let iFrame = document.createElement("iFrame")
+//     iFrame.setAttribute("allow", "fullscreen")
+//     iFrame.setAttribute("frameBorder", "0")
+//     iFrame.setAttribute("height", "270")
+//     iFrame.setAttribute("src","https://giphy.com/embed/xU7TNYYXP2UWnYUqPC/video")
+//     iFrame.setAttribute("width", "480")
+//     document.getElementById("vid").appendChild(iFrame)
+//     let winText = document.createElement("p")
+//     winText.innerText = "🏆 YOU DID IT! 🏆"
+//     winText.className = "rules-text"
+//     winText.style.color = "black"
+//     document.getElementById("vid").appendChild(winText)
+    
+    
+// })
 
 // 54 is the total num of letters
 
