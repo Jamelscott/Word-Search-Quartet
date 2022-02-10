@@ -40,6 +40,10 @@ const startGameLevelOne = () => {
   let wordBox = document.createElement('div');
   wordBox.setAttribute('id', 'word-box');
   containerB.appendChild(wordBox);
+  // container B // return-box
+  let returnBox = document.createElement('div');
+  returnBox.setAttribute('id', 'return-box');
+  containerB.appendChild(returnBox);
   // container B // word-box // APPLE
   let appleText = document.createElement('p');
   appleText.setAttribute('id', 'sail');
@@ -70,7 +74,8 @@ const startGameLevelOne = () => {
   returntoMainButton.setAttribute('id', 'returntoMainButton');
   returntoMainButton.setAttribute('class', 'button-invisible');
   returntoMainButton.innerText = 'RETURN TO MAIN MENU';
-  wordBox.appendChild(returntoMainButton);
+  document.getElementById("rules-text").innerText ="Just in case you forgot, here are the rules:"
+  returnBox.appendChild(returntoMainButton);
 
   // RETURN TO MAIN MENU
   document
@@ -82,6 +87,16 @@ const startGameLevelOne = () => {
 
       document.getElementById('header-container').remove();
       document.getElementById('main-container').remove();
+      if (document.querySelector('#breezy-status').innerText === "complete!" && document.querySelector('#tricky-status').innerText === "complete!" && document.querySelector('#tough-status').innerText === "complete!"){
+        document.querySelector("#rules-box").remove();
+        document.createElement("div").setAttribute("id", "#rules-box")
+        let catPhoto = document.createElement("img").setAttribute("id", "somaPhoto")
+        catPhoto.setAttribute("src", "https://placekitten.com/350/350")
+        let newRulesBox = document.querySelector("#rules-box")
+        newRulesBox.appendChild(catPhoto)
+        let catText = document.createElement("p").setAttribute("class", "rules-text").innerText = "Great job, you win!"
+        newRulesBox.appendChild(catText)
+      }
 
       // CHANGE TEXT AT MAIN MENU DEPENDING ON COLOR
     });
@@ -130,7 +145,7 @@ const startGameLevelOne = () => {
         .classList.add('button-visible');
       timer.innerText = '🏆You won!🏆';
       document.querySelector('#startLevel1').style.backgroundColor =
-        'limegreen';
+        'lightgreen';
         document.querySelector('#breezy-status').innerText = "complete!"
     }
   };
@@ -208,17 +223,17 @@ let generateNamesOne = () => {
   // SAIL
   //S
   sailS.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
+      sailS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailS.style.backgroundColor = 'lightgreen';
+      sailA.style.backgroundColor = 'lightgreen';
+      sailI.style.backgroundColor = 'lightgreen';
+      sailL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -226,17 +241,17 @@ let generateNamesOne = () => {
   });
   //A
   sailA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
+      sailS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailS.style.backgroundColor = 'lightgreen';
+      sailA.style.backgroundColor = 'lightgreen';
+      sailI.style.backgroundColor = 'lightgreen';
+      sailL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -244,17 +259,17 @@ let generateNamesOne = () => {
   });
   // I
   sailI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
+      sailS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailS.style.backgroundColor = 'lightgreen';
+      sailA.style.backgroundColor = 'lightgreen';
+      sailI.style.backgroundColor = 'lightgreen';
+      sailL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -262,17 +277,17 @@ let generateNamesOne = () => {
   });
   // L
   sailL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'rgb(233, 163, 163)';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      sailS.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailA.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailI.style.backgroundColor === 'rgb(233, 163, 163)' &&
-      sailL.style.backgroundColor === 'rgb(233, 163, 163)'
+      sailS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sailL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sailS.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailA.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailI.style.backgroundColor = 'rgb(137, 170, 170)';
-      sailL.style.backgroundColor = 'rgb(137, 170, 170)';
+      sailS.style.backgroundColor = 'lightgreen';
+      sailA.style.backgroundColor = 'lightgreen';
+      sailI.style.backgroundColor = 'lightgreen';
+      sailL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sail');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -281,21 +296,22 @@ let generateNamesOne = () => {
   // ANCHOR
   // A
   anchorA.addEventListener('mouseup', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = '#ffd6ba';
+    console.log(anchorA.style.backgroundColor)
     if (
-      anchorA.style.backgroundColor === 'red' &&
-      anchorN.style.backgroundColor === 'red' &&
-      anchorC.style.backgroundColor === 'red' &&
-      anchorH.style.backgroundColor === 'red' &&
-      anchorO.style.backgroundColor === 'red' &&
-      anchorR.style.backgroundColor === 'red'
+      anchorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorH.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorR.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      anchorA.style.backgroundColor = 'green';
-      anchorN.style.backgroundColor = 'green';
-      anchorC.style.backgroundColor = 'green';
-      anchorH.style.backgroundColor = 'green';
-      anchorO.style.backgroundColor = 'green';
-      anchorR.style.backgroundColor = 'green';
+      anchorA.style.backgroundColor = 'lightgreen';
+      anchorN.style.backgroundColor = 'lightgreen';
+      anchorC.style.backgroundColor = 'lightgreen';
+      anchorH.style.backgroundColor = 'lightgreen';
+      anchorO.style.backgroundColor = 'lightgreen';
+      anchorR.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#anchor');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -303,21 +319,21 @@ let generateNamesOne = () => {
   });
   // N
   anchorN.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      anchorA.style.backgroundColor === 'red' &&
-      anchorN.style.backgroundColor === 'red' &&
-      anchorC.style.backgroundColor === 'red' &&
-      anchorH.style.backgroundColor === 'red' &&
-      anchorO.style.backgroundColor === 'red' &&
-      anchorR.style.backgroundColor === 'red'
+      anchorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorH.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorR.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      anchorA.style.backgroundColor = 'green';
-      anchorN.style.backgroundColor = 'green';
-      anchorC.style.backgroundColor = 'green';
-      anchorH.style.backgroundColor = 'green';
-      anchorO.style.backgroundColor = 'green';
-      anchorR.style.backgroundColor = 'green';
+      anchorA.style.backgroundColor = 'lightgreen';
+      anchorN.style.backgroundColor = 'lightgreen';
+      anchorC.style.backgroundColor = 'lightgreen';
+      anchorH.style.backgroundColor = 'lightgreen';
+      anchorO.style.backgroundColor = 'lightgreen';
+      anchorR.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#anchor');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -325,21 +341,21 @@ let generateNamesOne = () => {
   });
   // C
   anchorC.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      anchorA.style.backgroundColor === 'red' &&
-      anchorN.style.backgroundColor === 'red' &&
-      anchorC.style.backgroundColor === 'red' &&
-      anchorH.style.backgroundColor === 'red' &&
-      anchorO.style.backgroundColor === 'red' &&
-      anchorR.style.backgroundColor === 'red'
+      anchorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorH.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorR.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      anchorA.style.backgroundColor = 'green';
-      anchorN.style.backgroundColor = 'green';
-      anchorC.style.backgroundColor = 'green';
-      anchorH.style.backgroundColor = 'green';
-      anchorO.style.backgroundColor = 'green';
-      anchorR.style.backgroundColor = 'green';
+      anchorA.style.backgroundColor = 'lightgreen';
+      anchorN.style.backgroundColor = 'lightgreen';
+      anchorC.style.backgroundColor = 'lightgreen';
+      anchorH.style.backgroundColor = 'lightgreen';
+      anchorO.style.backgroundColor = 'lightgreen';
+      anchorR.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#anchor');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -347,21 +363,21 @@ let generateNamesOne = () => {
   });
   // H
   anchorH.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      anchorA.style.backgroundColor === 'red' &&
-      anchorN.style.backgroundColor === 'red' &&
-      anchorC.style.backgroundColor === 'red' &&
-      anchorH.style.backgroundColor === 'red' &&
-      anchorO.style.backgroundColor === 'red' &&
-      anchorR.style.backgroundColor === 'red'
+      anchorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorH.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorR.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      anchorA.style.backgroundColor = 'green';
-      anchorN.style.backgroundColor = 'green';
-      anchorC.style.backgroundColor = 'green';
-      anchorH.style.backgroundColor = 'green';
-      anchorO.style.backgroundColor = 'green';
-      anchorR.style.backgroundColor = 'green';
+      anchorA.style.backgroundColor = 'lightgreen';
+      anchorN.style.backgroundColor = 'lightgreen';
+      anchorC.style.backgroundColor = 'lightgreen';
+      anchorH.style.backgroundColor = 'lightgreen';
+      anchorO.style.backgroundColor = 'lightgreen';
+      anchorR.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#anchor');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -369,21 +385,21 @@ let generateNamesOne = () => {
   });
   // O
   anchorO.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      anchorA.style.backgroundColor === 'red' &&
-      anchorN.style.backgroundColor === 'red' &&
-      anchorC.style.backgroundColor === 'red' &&
-      anchorH.style.backgroundColor === 'red' &&
-      anchorO.style.backgroundColor === 'red' &&
-      anchorR.style.backgroundColor === 'red'
+      anchorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorH.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorR.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      anchorA.style.backgroundColor = 'green';
-      anchorN.style.backgroundColor = 'green';
-      anchorC.style.backgroundColor = 'green';
-      anchorH.style.backgroundColor = 'green';
-      anchorO.style.backgroundColor = 'green';
-      anchorR.style.backgroundColor = 'green';
+      anchorA.style.backgroundColor = 'lightgreen';
+      anchorN.style.backgroundColor = 'lightgreen';
+      anchorC.style.backgroundColor = 'lightgreen';
+      anchorH.style.backgroundColor = 'lightgreen';
+      anchorO.style.backgroundColor = 'lightgreen';
+      anchorR.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#anchor');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -391,21 +407,21 @@ let generateNamesOne = () => {
   });
   // R
   anchorR.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = '#ffd6ba';
     if (
-      anchorA.style.backgroundColor === 'red' &&
-      anchorN.style.backgroundColor === 'red' &&
-      anchorC.style.backgroundColor === 'red' &&
-      anchorH.style.backgroundColor === 'red' &&
-      anchorO.style.backgroundColor === 'red' &&
-      anchorR.style.backgroundColor === 'red'
+      anchorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorH.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      anchorR.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      anchorA.style.backgroundColor = 'green';
-      anchorN.style.backgroundColor = 'green';
-      anchorC.style.backgroundColor = 'green';
-      anchorH.style.backgroundColor = 'green';
-      anchorO.style.backgroundColor = 'green';
-      anchorR.style.backgroundColor = 'green';
+      anchorA.style.backgroundColor = 'lightgreen';
+      anchorN.style.backgroundColor = 'lightgreen';
+      anchorC.style.backgroundColor = 'lightgreen';
+      anchorH.style.backgroundColor = 'lightgreen';
+      anchorO.style.backgroundColor = 'lightgreen';
+      anchorR.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#anchor');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -415,21 +431,21 @@ let generateNamesOne = () => {
   // PADDLE
   // P
   paddleP.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      paddleP.style.backgroundColor === 'red' &&
-      paddleA.style.backgroundColor === 'red' &&
-      paddleD1.style.backgroundColor === 'red' &&
-      paddleD2.style.backgroundColor === 'red' &&
-      paddleL.style.backgroundColor === 'red' &&
-      paddleE.style.backgroundColor === 'red'
+      paddleP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      paddleP.style.backgroundColor = 'green';
-      paddleA.style.backgroundColor = 'green';
-      paddleD1.style.backgroundColor = 'green';
-      paddleD2.style.backgroundColor = 'green';
-      paddleL.style.backgroundColor = 'green';
-      paddleE.style.backgroundColor = 'green';
+      paddleP.style.backgroundColor = 'lightgreen';
+      paddleA.style.backgroundColor = 'lightgreen';
+      paddleD1.style.backgroundColor = 'lightgreen';
+      paddleD2.style.backgroundColor = 'lightgreen';
+      paddleL.style.backgroundColor = 'lightgreen';
+      paddleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#paddle');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -437,21 +453,21 @@ let generateNamesOne = () => {
   });
   // A
   paddleA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      paddleP.style.backgroundColor === 'red' &&
-      paddleA.style.backgroundColor === 'red' &&
-      paddleD1.style.backgroundColor === 'red' &&
-      paddleD2.style.backgroundColor === 'red' &&
-      paddleL.style.backgroundColor === 'red' &&
-      paddleE.style.backgroundColor === 'red'
+      paddleP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      paddleP.style.backgroundColor = 'green';
-      paddleA.style.backgroundColor = 'green';
-      paddleD1.style.backgroundColor = 'green';
-      paddleD2.style.backgroundColor = 'green';
-      paddleL.style.backgroundColor = 'green';
-      paddleE.style.backgroundColor = 'green';
+      paddleP.style.backgroundColor = 'lightgreen';
+      paddleA.style.backgroundColor = 'lightgreen';
+      paddleD1.style.backgroundColor = 'lightgreen';
+      paddleD2.style.backgroundColor = 'lightgreen';
+      paddleL.style.backgroundColor = 'lightgreen';
+      paddleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#paddle');
       strike.classList.remove('biggerFont');
       strike.classList.remove('biggerFont');
@@ -460,21 +476,21 @@ let generateNamesOne = () => {
   });
   // D
   paddleD1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      paddleP.style.backgroundColor === 'red' &&
-      paddleA.style.backgroundColor === 'red' &&
-      paddleD1.style.backgroundColor === 'red' &&
-      paddleD2.style.backgroundColor === 'red' &&
-      paddleL.style.backgroundColor === 'red' &&
-      paddleE.style.backgroundColor === 'red'
+      paddleP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      paddleP.style.backgroundColor = 'green';
-      paddleA.style.backgroundColor = 'green';
-      paddleD1.style.backgroundColor = 'green';
-      paddleD2.style.backgroundColor = 'green';
-      paddleL.style.backgroundColor = 'green';
-      paddleE.style.backgroundColor = 'green';
+      paddleP.style.backgroundColor = 'lightgreen';
+      paddleA.style.backgroundColor = 'lightgreen';
+      paddleD1.style.backgroundColor = 'lightgreen';
+      paddleD2.style.backgroundColor = 'lightgreen';
+      paddleL.style.backgroundColor = 'lightgreen';
+      paddleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#paddle');
       strike.classList.remove('biggerFont');
       strike.classList.remove('biggerFont');
@@ -483,21 +499,21 @@ let generateNamesOne = () => {
   });
   // D
   paddleD2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      paddleP.style.backgroundColor === 'red' &&
-      paddleA.style.backgroundColor === 'red' &&
-      paddleD1.style.backgroundColor === 'red' &&
-      paddleD2.style.backgroundColor === 'red' &&
-      paddleL.style.backgroundColor === 'red' &&
-      paddleE.style.backgroundColor === 'red'
+      paddleP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      paddleP.style.backgroundColor = 'green';
-      paddleA.style.backgroundColor = 'green';
-      paddleD1.style.backgroundColor = 'green';
-      paddleD2.style.backgroundColor = 'green';
-      paddleL.style.backgroundColor = 'green';
-      paddleE.style.backgroundColor = 'green';
+      paddleP.style.backgroundColor = 'lightgreen';
+      paddleA.style.backgroundColor = 'lightgreen';
+      paddleD1.style.backgroundColor = 'lightgreen';
+      paddleD2.style.backgroundColor = 'lightgreen';
+      paddleL.style.backgroundColor = 'lightgreen';
+      paddleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#paddle');
       strike.classList.remove('biggerFont');
       strike.classList.remove('biggerFont');
@@ -506,21 +522,21 @@ let generateNamesOne = () => {
   });
   // L
   paddleL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      paddleP.style.backgroundColor === 'red' &&
-      paddleA.style.backgroundColor === 'red' &&
-      paddleD1.style.backgroundColor === 'red' &&
-      paddleD2.style.backgroundColor === 'red' &&
-      paddleL.style.backgroundColor === 'red' &&
-      paddleE.style.backgroundColor === 'red'
+      paddleP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      paddleP.style.backgroundColor = 'green';
-      paddleA.style.backgroundColor = 'green';
-      paddleD1.style.backgroundColor = 'green';
-      paddleD2.style.backgroundColor = 'green';
-      paddleL.style.backgroundColor = 'green';
-      paddleE.style.backgroundColor = 'green';
+      paddleP.style.backgroundColor = 'lightgreen';
+      paddleA.style.backgroundColor = 'lightgreen';
+      paddleD1.style.backgroundColor = 'lightgreen';
+      paddleD2.style.backgroundColor = 'lightgreen';
+      paddleL.style.backgroundColor = 'lightgreen';
+      paddleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#paddle');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -528,21 +544,21 @@ let generateNamesOne = () => {
   });
   // E
   paddleE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      paddleP.style.backgroundColor === 'red' &&
-      paddleA.style.backgroundColor === 'red' &&
-      paddleD1.style.backgroundColor === 'red' &&
-      paddleD2.style.backgroundColor === 'red' &&
-      paddleL.style.backgroundColor === 'red' &&
-      paddleE.style.backgroundColor === 'red'
+      paddleP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleD2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      paddleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      paddleP.style.backgroundColor = 'green';
-      paddleA.style.backgroundColor = 'green';
-      paddleD1.style.backgroundColor = 'green';
-      paddleD2.style.backgroundColor = 'green';
-      paddleL.style.backgroundColor = 'green';
-      paddleE.style.backgroundColor = 'green';
+      paddleP.style.backgroundColor = 'lightgreen';
+      paddleA.style.backgroundColor = 'lightgreen';
+      paddleD1.style.backgroundColor = 'lightgreen';
+      paddleD2.style.backgroundColor = 'lightgreen';
+      paddleL.style.backgroundColor = 'lightgreen';
+      paddleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#paddle');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -552,17 +568,17 @@ let generateNamesOne = () => {
   // TIDE
   // T
   tideT.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tideT.style.backgroundColor === 'red' &&
-      tideI.style.backgroundColor === 'red' &&
-      tideD.style.backgroundColor === 'red' &&
-      tideE.style.backgroundColor === 'red'
+      tideT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tideT.style.backgroundColor = 'green';
-      tideI.style.backgroundColor = 'green';
-      tideD.style.backgroundColor = 'green';
-      tideE.style.backgroundColor = 'green';
+      tideT.style.backgroundColor = 'lightgreen';
+      tideI.style.backgroundColor = 'lightgreen';
+      tideD.style.backgroundColor = 'lightgreen';
+      tideE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tide');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -570,17 +586,17 @@ let generateNamesOne = () => {
   });
   // I
   tideI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tideT.style.backgroundColor === 'red' &&
-      tideI.style.backgroundColor === 'red' &&
-      tideD.style.backgroundColor === 'red' &&
-      tideE.style.backgroundColor === 'red'
+      tideT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tideT.style.backgroundColor = 'green';
-      tideI.style.backgroundColor = 'green';
-      tideD.style.backgroundColor = 'green';
-      tideE.style.backgroundColor = 'green';
+      tideT.style.backgroundColor = 'lightgreen';
+      tideI.style.backgroundColor = 'lightgreen';
+      tideD.style.backgroundColor = 'lightgreen';
+      tideE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tide');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -588,17 +604,17 @@ let generateNamesOne = () => {
   });
   // D
   tideD.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tideT.style.backgroundColor === 'red' &&
-      tideI.style.backgroundColor === 'red' &&
-      tideD.style.backgroundColor === 'red' &&
-      tideE.style.backgroundColor === 'red'
+      tideT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tideT.style.backgroundColor = 'green';
-      tideI.style.backgroundColor = 'green';
-      tideD.style.backgroundColor = 'green';
-      tideE.style.backgroundColor = 'green';
+      tideT.style.backgroundColor = 'lightgreen';
+      tideI.style.backgroundColor = 'lightgreen';
+      tideD.style.backgroundColor = 'lightgreen';
+      tideE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tide');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -606,17 +622,17 @@ let generateNamesOne = () => {
   });
   // E
   tideE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tideT.style.backgroundColor === 'red' &&
-      tideI.style.backgroundColor === 'red' &&
-      tideD.style.backgroundColor === 'red' &&
-      tideE.style.backgroundColor === 'red'
+      tideT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tideE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tideT.style.backgroundColor = 'green';
-      tideI.style.backgroundColor = 'green';
-      tideD.style.backgroundColor = 'green';
-      tideE.style.backgroundColor = 'green';
+      tideT.style.backgroundColor = 'lightgreen';
+      tideI.style.backgroundColor = 'lightgreen';
+      tideD.style.backgroundColor = 'lightgreen';
+      tideE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tide');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -667,6 +683,10 @@ const startGameLevelTwo = () => {
   let wordBox = document.createElement('div');
   wordBox.setAttribute('id', 'word-box');
   containerB.appendChild(wordBox);
+  // container B // return-box
+  let returnBox = document.createElement('div');
+  returnBox.setAttribute('id', 'return-box');
+  containerB.appendChild(returnBox);
   // container B // word-box // APPLE
   let appleText = document.createElement('p');
   appleText.setAttribute('id', 'apple');
@@ -727,7 +747,9 @@ const startGameLevelTwo = () => {
   returntoMainButton.setAttribute('id', 'returntoMainButton');
   returntoMainButton.setAttribute('class', 'button-invisible');
   returntoMainButton.innerText = 'RETURN TO MAIN MENU';
-  wordBox.appendChild(returntoMainButton);
+  document.getElementById("rules-text").innerText ="Just in case you forgot, here are the rules:"
+
+  returnBox.appendChild(returntoMainButton);
 
   // RETURN TO MAIN MENU
   document
@@ -787,7 +809,7 @@ const startGameLevelTwo = () => {
         .classList.add('button-visible');
       timer.innerText = '🏆You won!🏆';
       document.querySelector('#startLevel2').style.backgroundColor =
-        'limegreen';
+        'lightgreen';
         document.querySelector('#tricky-status').innerText = "complete!"
     }
   };
@@ -970,38 +992,38 @@ let generateNamesTwo = () => {
   peachH.innerText = 'H';
 
   appleA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      appleA.style.backgroundColor === 'red' &&
-      appleP1.style.backgroundColor === 'red' &&
-      appleP2.style.backgroundColor === 'red' &&
-      appleL.style.backgroundColor === 'red' &&
-      appleE.style.backgroundColor === 'red'
+      appleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      appleA.style.backgroundColor = 'green';
-      appleP1.style.backgroundColor = 'green';
-      appleP2.style.backgroundColor = 'green';
-      appleL.style.backgroundColor = 'green';
-      appleE.style.backgroundColor = 'green';
+      appleA.style.backgroundColor = 'lightgreen';
+      appleP1.style.backgroundColor = 'lightgreen';
+      appleP2.style.backgroundColor = 'lightgreen';
+      appleL.style.backgroundColor = 'lightgreen';
+      appleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#apple');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
     }
   });
   appleP1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      appleA.style.backgroundColor === 'red' &&
-      appleP1.style.backgroundColor === 'red' &&
-      appleP2.style.backgroundColor === 'red' &&
-      appleL.style.backgroundColor === 'red' &&
-      appleE.style.backgroundColor === 'red'
+      appleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      appleA.style.backgroundColor = 'green';
-      appleP1.style.backgroundColor = 'green';
-      appleP2.style.backgroundColor = 'green';
-      appleL.style.backgroundColor = 'green';
-      appleE.style.backgroundColor = 'green';
+      appleA.style.backgroundColor = 'lightgreen';
+      appleP1.style.backgroundColor = 'lightgreen';
+      appleP2.style.backgroundColor = 'lightgreen';
+      appleL.style.backgroundColor = 'lightgreen';
+      appleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#apple');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1009,19 +1031,19 @@ let generateNamesTwo = () => {
   });
   // P
   appleP2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      appleA.style.backgroundColor === 'red' &&
-      appleP1.style.backgroundColor === 'red' &&
-      appleP2.style.backgroundColor === 'red' &&
-      appleL.style.backgroundColor === 'red' &&
-      appleE.style.backgroundColor === 'red'
+      appleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      appleA.style.backgroundColor = 'green';
-      appleP1.style.backgroundColor = 'green';
-      appleP2.style.backgroundColor = 'green';
-      appleL.style.backgroundColor = 'green';
-      appleE.style.backgroundColor = 'green';
+      appleA.style.backgroundColor = 'lightgreen';
+      appleP1.style.backgroundColor = 'lightgreen';
+      appleP2.style.backgroundColor = 'lightgreen';
+      appleL.style.backgroundColor = 'lightgreen';
+      appleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#apple');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1029,19 +1051,19 @@ let generateNamesTwo = () => {
   });
   // L
   appleL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      appleA.style.backgroundColor === 'red' &&
-      appleP1.style.backgroundColor === 'red' &&
-      appleP2.style.backgroundColor === 'red' &&
-      appleL.style.backgroundColor === 'red' &&
-      appleE.style.backgroundColor === 'red'
+      appleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      appleA.style.backgroundColor = 'green';
-      appleP1.style.backgroundColor = 'green';
-      appleP2.style.backgroundColor = 'green';
-      appleL.style.backgroundColor = 'green';
-      appleE.style.backgroundColor = 'green';
+      appleA.style.backgroundColor = 'lightgreen';
+      appleP1.style.backgroundColor = 'lightgreen';
+      appleP2.style.backgroundColor = 'lightgreen';
+      appleL.style.backgroundColor = 'lightgreen';
+      appleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#apple');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1049,19 +1071,19 @@ let generateNamesTwo = () => {
   });
   // E
   appleE.addEventListener('mouseup', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      appleA.style.backgroundColor === 'red' &&
-      appleP1.style.backgroundColor === 'red' &&
-      appleP2.style.backgroundColor === 'red' &&
-      appleL.style.backgroundColor === 'red' &&
-      appleE.style.backgroundColor === 'red'
+      appleA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleP2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      appleE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      appleA.style.backgroundColor = 'green';
-      appleP1.style.backgroundColor = 'green';
-      appleP2.style.backgroundColor = 'green';
-      appleL.style.backgroundColor = 'green';
-      appleE.style.backgroundColor = 'green';
+      appleA.style.backgroundColor = 'lightgreen';
+      appleP1.style.backgroundColor = 'lightgreen';
+      appleP2.style.backgroundColor = 'lightgreen';
+      appleL.style.backgroundColor = 'lightgreen';
+      appleE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#apple');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1070,21 +1092,21 @@ let generateNamesTwo = () => {
   // ORANGE
   // O
   orangeO.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      orangeO.style.backgroundColor === 'red' &&
-      orangeR.style.backgroundColor === 'red' &&
-      orangeA.style.backgroundColor === 'red' &&
-      orangeN.style.backgroundColor === 'red' &&
-      orangeG.style.backgroundColor === 'red' &&
-      orangeE.style.backgroundColor === 'red'
+      orangeO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      orangeO.style.backgroundColor = 'green';
-      orangeR.style.backgroundColor = 'green';
-      orangeA.style.backgroundColor = 'green';
-      orangeN.style.backgroundColor = 'green';
-      orangeG.style.backgroundColor = 'green';
-      orangeE.style.backgroundColor = 'green';
+      orangeO.style.backgroundColor = 'lightgreen';
+      orangeR.style.backgroundColor = 'lightgreen';
+      orangeA.style.backgroundColor = 'lightgreen';
+      orangeN.style.backgroundColor = 'lightgreen';
+      orangeG.style.backgroundColor = 'lightgreen';
+      orangeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#orange');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1092,21 +1114,21 @@ let generateNamesTwo = () => {
   });
   // R
   orangeR.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      orangeO.style.backgroundColor === 'red' &&
-      orangeR.style.backgroundColor === 'red' &&
-      orangeA.style.backgroundColor === 'red' &&
-      orangeN.style.backgroundColor === 'red' &&
-      orangeG.style.backgroundColor === 'red' &&
-      orangeE.style.backgroundColor === 'red'
+      orangeO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      orangeO.style.backgroundColor = 'green';
-      orangeR.style.backgroundColor = 'green';
-      orangeA.style.backgroundColor = 'green';
-      orangeN.style.backgroundColor = 'green';
-      orangeG.style.backgroundColor = 'green';
-      orangeE.style.backgroundColor = 'green';
+      orangeO.style.backgroundColor = 'lightgreen';
+      orangeR.style.backgroundColor = 'lightgreen';
+      orangeA.style.backgroundColor = 'lightgreen';
+      orangeN.style.backgroundColor = 'lightgreen';
+      orangeG.style.backgroundColor = 'lightgreen';
+      orangeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#orange');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1114,21 +1136,21 @@ let generateNamesTwo = () => {
   });
   // A
   orangeA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      orangeO.style.backgroundColor === 'red' &&
-      orangeR.style.backgroundColor === 'red' &&
-      orangeA.style.backgroundColor === 'red' &&
-      orangeN.style.backgroundColor === 'red' &&
-      orangeG.style.backgroundColor === 'red' &&
-      orangeE.style.backgroundColor === 'red'
+      orangeO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      orangeO.style.backgroundColor = 'green';
-      orangeR.style.backgroundColor = 'green';
-      orangeA.style.backgroundColor = 'green';
-      orangeN.style.backgroundColor = 'green';
-      orangeG.style.backgroundColor = 'green';
-      orangeE.style.backgroundColor = 'green';
+      orangeO.style.backgroundColor = 'lightgreen';
+      orangeR.style.backgroundColor = 'lightgreen';
+      orangeA.style.backgroundColor = 'lightgreen';
+      orangeN.style.backgroundColor = 'lightgreen';
+      orangeG.style.backgroundColor = 'lightgreen';
+      orangeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#orange');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1136,21 +1158,21 @@ let generateNamesTwo = () => {
   });
   // N
   orangeN.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      orangeO.style.backgroundColor === 'red' &&
-      orangeR.style.backgroundColor === 'red' &&
-      orangeA.style.backgroundColor === 'red' &&
-      orangeN.style.backgroundColor === 'red' &&
-      orangeG.style.backgroundColor === 'red' &&
-      orangeE.style.backgroundColor === 'red'
+      orangeO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      orangeO.style.backgroundColor = 'green';
-      orangeR.style.backgroundColor = 'green';
-      orangeA.style.backgroundColor = 'green';
-      orangeN.style.backgroundColor = 'green';
-      orangeG.style.backgroundColor = 'green';
-      orangeE.style.backgroundColor = 'green';
+      orangeO.style.backgroundColor = 'lightgreen';
+      orangeR.style.backgroundColor = 'lightgreen';
+      orangeA.style.backgroundColor = 'lightgreen';
+      orangeN.style.backgroundColor = 'lightgreen';
+      orangeG.style.backgroundColor = 'lightgreen';
+      orangeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#orange');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1158,21 +1180,21 @@ let generateNamesTwo = () => {
   });
   // G
   orangeG.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      orangeO.style.backgroundColor === 'red' &&
-      orangeR.style.backgroundColor === 'red' &&
-      orangeA.style.backgroundColor === 'red' &&
-      orangeN.style.backgroundColor === 'red' &&
-      orangeG.style.backgroundColor === 'red' &&
-      orangeE.style.backgroundColor === 'red'
+      orangeO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      orangeO.style.backgroundColor = 'green';
-      orangeR.style.backgroundColor = 'green';
-      orangeA.style.backgroundColor = 'green';
-      orangeN.style.backgroundColor = 'green';
-      orangeG.style.backgroundColor = 'green';
-      orangeE.style.backgroundColor = 'green';
+      orangeO.style.backgroundColor = 'lightgreen';
+      orangeR.style.backgroundColor = 'lightgreen';
+      orangeA.style.backgroundColor = 'lightgreen';
+      orangeN.style.backgroundColor = 'lightgreen';
+      orangeG.style.backgroundColor = 'lightgreen';
+      orangeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#orange');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1180,21 +1202,21 @@ let generateNamesTwo = () => {
   });
   // E
   orangeE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      orangeO.style.backgroundColor === 'red' &&
-      orangeR.style.backgroundColor === 'red' &&
-      orangeA.style.backgroundColor === 'red' &&
-      orangeN.style.backgroundColor === 'red' &&
-      orangeG.style.backgroundColor === 'red' &&
-      orangeE.style.backgroundColor === 'red'
+      orangeO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      orangeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      orangeO.style.backgroundColor = 'green';
-      orangeR.style.backgroundColor = 'green';
-      orangeA.style.backgroundColor = 'green';
-      orangeN.style.backgroundColor = 'green';
-      orangeG.style.backgroundColor = 'green';
-      orangeE.style.backgroundColor = 'green';
+      orangeO.style.backgroundColor = 'lightgreen';
+      orangeR.style.backgroundColor = 'lightgreen';
+      orangeA.style.backgroundColor = 'lightgreen';
+      orangeN.style.backgroundColor = 'lightgreen';
+      orangeG.style.backgroundColor = 'lightgreen';
+      orangeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#orange');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1203,21 +1225,21 @@ let generateNamesTwo = () => {
   // BANANA
   // B
   bananaB.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      bananaB.style.backgroundColor === 'red' &&
-      bananaA1.style.backgroundColor === 'red' &&
-      bananaN1.style.backgroundColor === 'red' &&
-      bananaA2.style.backgroundColor === 'red' &&
-      bananaN2.style.backgroundColor === 'red' &&
-      bananaA3.style.backgroundColor === 'red'
+      bananaB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      bananaB.style.backgroundColor = 'green';
-      bananaA1.style.backgroundColor = 'green';
-      bananaN1.style.backgroundColor = 'green';
-      bananaA2.style.backgroundColor = 'green';
-      bananaN2.style.backgroundColor = 'green';
-      bananaA3.style.backgroundColor = 'green';
+      bananaB.style.backgroundColor = 'lightgreen';
+      bananaA1.style.backgroundColor = 'lightgreen';
+      bananaN1.style.backgroundColor = 'lightgreen';
+      bananaA2.style.backgroundColor = 'lightgreen';
+      bananaN2.style.backgroundColor = 'lightgreen';
+      bananaA3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#banana');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1225,21 +1247,21 @@ let generateNamesTwo = () => {
   });
   // A
   bananaA1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      bananaB.style.backgroundColor === 'red' &&
-      bananaA1.style.backgroundColor === 'red' &&
-      bananaN1.style.backgroundColor === 'red' &&
-      bananaA2.style.backgroundColor === 'red' &&
-      bananaN2.style.backgroundColor === 'red' &&
-      bananaA3.style.backgroundColor === 'red'
+      bananaB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      bananaB.style.backgroundColor = 'green';
-      bananaA1.style.backgroundColor = 'green';
-      bananaN1.style.backgroundColor = 'green';
-      bananaA2.style.backgroundColor = 'green';
-      bananaN2.style.backgroundColor = 'green';
-      bananaA3.style.backgroundColor = 'green';
+      bananaB.style.backgroundColor = 'lightgreen';
+      bananaA1.style.backgroundColor = 'lightgreen';
+      bananaN1.style.backgroundColor = 'lightgreen';
+      bananaA2.style.backgroundColor = 'lightgreen';
+      bananaN2.style.backgroundColor = 'lightgreen';
+      bananaA3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#banana');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1247,21 +1269,21 @@ let generateNamesTwo = () => {
   });
   // N
   bananaN1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      bananaB.style.backgroundColor === 'red' &&
-      bananaA1.style.backgroundColor === 'red' &&
-      bananaN1.style.backgroundColor === 'red' &&
-      bananaA2.style.backgroundColor === 'red' &&
-      bananaN2.style.backgroundColor === 'red' &&
-      bananaA3.style.backgroundColor === 'red'
+      bananaB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      bananaB.style.backgroundColor = 'green';
-      bananaA1.style.backgroundColor = 'green';
-      bananaN1.style.backgroundColor = 'green';
-      bananaA2.style.backgroundColor = 'green';
-      bananaN2.style.backgroundColor = 'green';
-      bananaA3.style.backgroundColor = 'green';
+      bananaB.style.backgroundColor = 'lightgreen';
+      bananaA1.style.backgroundColor = 'lightgreen';
+      bananaN1.style.backgroundColor = 'lightgreen';
+      bananaA2.style.backgroundColor = 'lightgreen';
+      bananaN2.style.backgroundColor = 'lightgreen';
+      bananaA3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#banana');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1269,21 +1291,21 @@ let generateNamesTwo = () => {
   });
   // A
   bananaA2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      bananaB.style.backgroundColor === 'red' &&
-      bananaA1.style.backgroundColor === 'red' &&
-      bananaN1.style.backgroundColor === 'red' &&
-      bananaA2.style.backgroundColor === 'red' &&
-      bananaN2.style.backgroundColor === 'red' &&
-      bananaA3.style.backgroundColor === 'red'
+      bananaB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      bananaB.style.backgroundColor = 'green';
-      bananaA1.style.backgroundColor = 'green';
-      bananaN1.style.backgroundColor = 'green';
-      bananaA2.style.backgroundColor = 'green';
-      bananaN2.style.backgroundColor = 'green';
-      bananaA3.style.backgroundColor = 'green';
+      bananaB.style.backgroundColor = 'lightgreen';
+      bananaA1.style.backgroundColor = 'lightgreen';
+      bananaN1.style.backgroundColor = 'lightgreen';
+      bananaA2.style.backgroundColor = 'lightgreen';
+      bananaN2.style.backgroundColor = 'lightgreen';
+      bananaA3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#banana');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1291,21 +1313,21 @@ let generateNamesTwo = () => {
   });
   // N
   bananaN2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      bananaB.style.backgroundColor === 'red' &&
-      bananaA1.style.backgroundColor === 'red' &&
-      bananaN1.style.backgroundColor === 'red' &&
-      bananaA2.style.backgroundColor === 'red' &&
-      bananaN2.style.backgroundColor === 'red' &&
-      bananaA3.style.backgroundColor === 'red'
+      bananaB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      bananaB.style.backgroundColor = 'green';
-      bananaA1.style.backgroundColor = 'green';
-      bananaN1.style.backgroundColor = 'green';
-      bananaA2.style.backgroundColor = 'green';
-      bananaN2.style.backgroundColor = 'green';
-      bananaA3.style.backgroundColor = 'green';
+      bananaB.style.backgroundColor = 'lightgreen';
+      bananaA1.style.backgroundColor = 'lightgreen';
+      bananaN1.style.backgroundColor = 'lightgreen';
+      bananaA2.style.backgroundColor = 'lightgreen';
+      bananaN2.style.backgroundColor = 'lightgreen';
+      bananaA3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#banana');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1313,21 +1335,21 @@ let generateNamesTwo = () => {
   });
   // A
   bananaA3.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      bananaB.style.backgroundColor === 'red' &&
-      bananaA1.style.backgroundColor === 'red' &&
-      bananaN1.style.backgroundColor === 'red' &&
-      bananaA2.style.backgroundColor === 'red' &&
-      bananaN2.style.backgroundColor === 'red' &&
-      bananaA3.style.backgroundColor === 'red'
+      bananaB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      bananaA3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      bananaB.style.backgroundColor = 'green';
-      bananaA1.style.backgroundColor = 'green';
-      bananaN1.style.backgroundColor = 'green';
-      bananaA2.style.backgroundColor = 'green';
-      bananaN2.style.backgroundColor = 'green';
-      bananaA3.style.backgroundColor = 'green';
+      bananaB.style.backgroundColor = 'lightgreen';
+      bananaA1.style.backgroundColor = 'lightgreen';
+      bananaN1.style.backgroundColor = 'lightgreen';
+      bananaA2.style.backgroundColor = 'lightgreen';
+      bananaN2.style.backgroundColor = 'lightgreen';
+      bananaA3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#banana');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1336,19 +1358,19 @@ let generateNamesTwo = () => {
   // GRAPE
   // G
   grapeG.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      grapeG.style.backgroundColor === 'red' &&
-      grapeR.style.backgroundColor === 'red' &&
-      grapeA.style.backgroundColor === 'red' &&
-      grapeP.style.backgroundColor === 'red' &&
-      grapeE.style.backgroundColor === 'red'
+      grapeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      grapeG.style.backgroundColor = 'green';
-      grapeR.style.backgroundColor = 'green';
-      grapeA.style.backgroundColor = 'green';
-      grapeP.style.backgroundColor = 'green';
-      grapeE.style.backgroundColor = 'green';
+      grapeG.style.backgroundColor = 'lightgreen';
+      grapeR.style.backgroundColor = 'lightgreen';
+      grapeA.style.backgroundColor = 'lightgreen';
+      grapeP.style.backgroundColor = 'lightgreen';
+      grapeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#grape');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1356,19 +1378,19 @@ let generateNamesTwo = () => {
   });
   // R
   grapeR.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      grapeG.style.backgroundColor === 'red' &&
-      grapeR.style.backgroundColor === 'red' &&
-      grapeA.style.backgroundColor === 'red' &&
-      grapeP.style.backgroundColor === 'red' &&
-      grapeE.style.backgroundColor === 'red'
+      grapeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      grapeG.style.backgroundColor = 'green';
-      grapeR.style.backgroundColor = 'green';
-      grapeA.style.backgroundColor = 'green';
-      grapeP.style.backgroundColor = 'green';
-      grapeE.style.backgroundColor = 'green';
+      grapeG.style.backgroundColor = 'lightgreen';
+      grapeR.style.backgroundColor = 'lightgreen';
+      grapeA.style.backgroundColor = 'lightgreen';
+      grapeP.style.backgroundColor = 'lightgreen';
+      grapeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#grape');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1376,19 +1398,19 @@ let generateNamesTwo = () => {
   });
   // A
   grapeA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      grapeG.style.backgroundColor === 'red' &&
-      grapeR.style.backgroundColor === 'red' &&
-      grapeA.style.backgroundColor === 'red' &&
-      grapeP.style.backgroundColor === 'red' &&
-      grapeE.style.backgroundColor === 'red'
+      grapeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      grapeG.style.backgroundColor = 'green';
-      grapeR.style.backgroundColor = 'green';
-      grapeA.style.backgroundColor = 'green';
-      grapeP.style.backgroundColor = 'green';
-      grapeE.style.backgroundColor = 'green';
+      grapeG.style.backgroundColor = 'lightgreen';
+      grapeR.style.backgroundColor = 'lightgreen';
+      grapeA.style.backgroundColor = 'lightgreen';
+      grapeP.style.backgroundColor = 'lightgreen';
+      grapeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#grape');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1396,19 +1418,19 @@ let generateNamesTwo = () => {
   });
   // P
   grapeP.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      grapeG.style.backgroundColor === 'red' &&
-      grapeR.style.backgroundColor === 'red' &&
-      grapeA.style.backgroundColor === 'red' &&
-      grapeP.style.backgroundColor === 'red' &&
-      grapeE.style.backgroundColor === 'red'
+      grapeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      grapeG.style.backgroundColor = 'green';
-      grapeR.style.backgroundColor = 'green';
-      grapeA.style.backgroundColor = 'green';
-      grapeP.style.backgroundColor = 'green';
-      grapeE.style.backgroundColor = 'green';
+      grapeG.style.backgroundColor = 'lightgreen';
+      grapeR.style.backgroundColor = 'lightgreen';
+      grapeA.style.backgroundColor = 'lightgreen';
+      grapeP.style.backgroundColor = 'lightgreen';
+      grapeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#grape');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1416,19 +1438,19 @@ let generateNamesTwo = () => {
   });
   // E
   grapeE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      grapeG.style.backgroundColor === 'red' &&
-      grapeR.style.backgroundColor === 'red' &&
-      grapeA.style.backgroundColor === 'red' &&
-      grapeP.style.backgroundColor === 'red' &&
-      grapeE.style.backgroundColor === 'red'
+      grapeG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      grapeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      grapeG.style.backgroundColor = 'green';
-      grapeR.style.backgroundColor = 'green';
-      grapeA.style.backgroundColor = 'green';
-      grapeP.style.backgroundColor = 'green';
-      grapeE.style.backgroundColor = 'green';
+      grapeG.style.backgroundColor = 'lightgreen';
+      grapeR.style.backgroundColor = 'lightgreen';
+      grapeA.style.backgroundColor = 'lightgreen';
+      grapeP.style.backgroundColor = 'lightgreen';
+      grapeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#grape');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1437,27 +1459,27 @@ let generateNamesTwo = () => {
   // NECTARINE
   // N
   nectarineN1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1465,27 +1487,27 @@ let generateNamesTwo = () => {
   });
   // E
   nectarineE1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1493,27 +1515,27 @@ let generateNamesTwo = () => {
   });
   // C
   nectarineC.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1521,27 +1543,27 @@ let generateNamesTwo = () => {
   });
   // T
   nectarineT.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1549,27 +1571,27 @@ let generateNamesTwo = () => {
   });
   // A
   nectarineA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1577,27 +1599,27 @@ let generateNamesTwo = () => {
   });
   // R
   nectarineR.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1605,27 +1627,27 @@ let generateNamesTwo = () => {
   });
   // I
   nectarineI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1633,27 +1655,27 @@ let generateNamesTwo = () => {
   });
   // N
   nectarineN2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1661,27 +1683,27 @@ let generateNamesTwo = () => {
   });
   // E
   nectarineE2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      nectarineN1.style.backgroundColor === 'red' &&
-      nectarineE1.style.backgroundColor === 'red' &&
-      nectarineC.style.backgroundColor === 'red' &&
-      nectarineT.style.backgroundColor === 'red' &&
-      nectarineA.style.backgroundColor === 'red' &&
-      nectarineR.style.backgroundColor === 'red' &&
-      nectarineI.style.backgroundColor === 'red' &&
-      nectarineN2.style.backgroundColor === 'red' &&
-      nectarineE2.style.backgroundColor === 'red'
+      nectarineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      nectarineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      nectarineN1.style.backgroundColor = 'green';
-      nectarineE1.style.backgroundColor = 'green';
-      nectarineC.style.backgroundColor = 'green';
-      nectarineT.style.backgroundColor = 'green';
-      nectarineA.style.backgroundColor = 'green';
-      nectarineR.style.backgroundColor = 'green';
-      nectarineI.style.backgroundColor = 'green';
-      nectarineN2.style.backgroundColor = 'green';
-      nectarineE2.style.backgroundColor = 'green';
+      nectarineN1.style.backgroundColor = 'lightgreen';
+      nectarineE1.style.backgroundColor = 'lightgreen';
+      nectarineC.style.backgroundColor = 'lightgreen';
+      nectarineT.style.backgroundColor = 'lightgreen';
+      nectarineA.style.backgroundColor = 'lightgreen';
+      nectarineR.style.backgroundColor = 'lightgreen';
+      nectarineI.style.backgroundColor = 'lightgreen';
+      nectarineN2.style.backgroundColor = 'lightgreen';
+      nectarineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#nectarine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1690,27 +1712,27 @@ let generateNamesTwo = () => {
   // TANGERINE
   // T
   tangerineT.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1718,27 +1740,27 @@ let generateNamesTwo = () => {
   });
   // A
   tangerineA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1746,27 +1768,27 @@ let generateNamesTwo = () => {
   });
   // N
   tangerineN1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1774,27 +1796,27 @@ let generateNamesTwo = () => {
   });
   // G
   tangerineG.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1802,27 +1824,27 @@ let generateNamesTwo = () => {
   });
   // E
   tangerineE1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1830,27 +1852,27 @@ let generateNamesTwo = () => {
   });
   // R
   tangerineR.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1858,27 +1880,27 @@ let generateNamesTwo = () => {
   });
   // I
   tangerineI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1886,27 +1908,27 @@ let generateNamesTwo = () => {
   });
   // N
   tangerineN2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1914,27 +1936,27 @@ let generateNamesTwo = () => {
   });
   // E
   tangerineE2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      tangerineT.style.backgroundColor === 'red' &&
-      tangerineA.style.backgroundColor === 'red' &&
-      tangerineN1.style.backgroundColor === 'red' &&
-      tangerineG.style.backgroundColor === 'red' &&
-      tangerineE1.style.backgroundColor === 'red' &&
-      tangerineR.style.backgroundColor === 'red' &&
-      tangerineI.style.backgroundColor === 'red' &&
-      tangerineN2.style.backgroundColor === 'red' &&
-      tangerineE2.style.backgroundColor === 'red'
+      tangerineT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      tangerineE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      tangerineT.style.backgroundColor = 'green';
-      tangerineA.style.backgroundColor = 'green';
-      tangerineN1.style.backgroundColor = 'green';
-      tangerineG.style.backgroundColor = 'green';
-      tangerineE1.style.backgroundColor = 'green';
-      tangerineR.style.backgroundColor = 'green';
-      tangerineI.style.backgroundColor = 'green';
-      tangerineN2.style.backgroundColor = 'green';
-      tangerineE2.style.backgroundColor = 'green';
+      tangerineT.style.backgroundColor = 'lightgreen';
+      tangerineA.style.backgroundColor = 'lightgreen';
+      tangerineN1.style.backgroundColor = 'lightgreen';
+      tangerineG.style.backgroundColor = 'lightgreen';
+      tangerineE1.style.backgroundColor = 'lightgreen';
+      tangerineR.style.backgroundColor = 'lightgreen';
+      tangerineI.style.backgroundColor = 'lightgreen';
+      tangerineN2.style.backgroundColor = 'lightgreen';
+      tangerineE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#tangerine');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1943,17 +1965,17 @@ let generateNamesTwo = () => {
   // LIME
   // L
   limeL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      limeL.style.backgroundColor === 'red' &&
-      limeI.style.backgroundColor === 'red' &&
-      limeM.style.backgroundColor === 'red' &&
-      limeE.style.backgroundColor === 'red'
+      limeL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      limeL.style.backgroundColor = 'green';
-      limeI.style.backgroundColor = 'green';
-      limeM.style.backgroundColor = 'green';
-      limeE.style.backgroundColor = 'green';
+      limeL.style.backgroundColor = 'lightgreen';
+      limeI.style.backgroundColor = 'lightgreen';
+      limeM.style.backgroundColor = 'lightgreen';
+      limeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#lime');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1961,17 +1983,17 @@ let generateNamesTwo = () => {
   });
   // I
   limeI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      limeL.style.backgroundColor === 'red' &&
-      limeI.style.backgroundColor === 'red' &&
-      limeM.style.backgroundColor === 'red' &&
-      limeE.style.backgroundColor === 'red'
+      limeL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      limeL.style.backgroundColor = 'green';
-      limeI.style.backgroundColor = 'green';
-      limeM.style.backgroundColor = 'green';
-      limeE.style.backgroundColor = 'green';
+      limeL.style.backgroundColor = 'lightgreen';
+      limeI.style.backgroundColor = 'lightgreen';
+      limeM.style.backgroundColor = 'lightgreen';
+      limeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#lime');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1979,17 +2001,17 @@ let generateNamesTwo = () => {
   });
   // M
   limeM.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      limeL.style.backgroundColor === 'red' &&
-      limeI.style.backgroundColor === 'red' &&
-      limeM.style.backgroundColor === 'red' &&
-      limeE.style.backgroundColor === 'red'
+      limeL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      limeL.style.backgroundColor = 'green';
-      limeI.style.backgroundColor = 'green';
-      limeM.style.backgroundColor = 'green';
-      limeE.style.backgroundColor = 'green';
+      limeL.style.backgroundColor = 'lightgreen';
+      limeI.style.backgroundColor = 'lightgreen';
+      limeM.style.backgroundColor = 'lightgreen';
+      limeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#lime');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -1997,17 +2019,17 @@ let generateNamesTwo = () => {
   });
   // E
   limeE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      limeL.style.backgroundColor === 'red' &&
-      limeI.style.backgroundColor === 'red' &&
-      limeM.style.backgroundColor === 'red' &&
-      limeE.style.backgroundColor === 'red'
+      limeL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      limeE.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      limeL.style.backgroundColor = 'green';
-      limeI.style.backgroundColor = 'green';
-      limeM.style.backgroundColor = 'green';
-      limeE.style.backgroundColor = 'green';
+      limeL.style.backgroundColor = 'lightgreen';
+      limeI.style.backgroundColor = 'lightgreen';
+      limeM.style.backgroundColor = 'lightgreen';
+      limeE.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#lime');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2016,19 +2038,19 @@ let generateNamesTwo = () => {
   // MANGO
   // M
   mangoM.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mangoM.style.backgroundColor === 'red' &&
-      mangoA.style.backgroundColor === 'red' &&
-      mangoN.style.backgroundColor === 'red' &&
-      mangoG.style.backgroundColor === 'red' &&
-      mangoO.style.backgroundColor === 'red'
+      mangoM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoO.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mangoM.style.backgroundColor = 'green';
-      mangoA.style.backgroundColor = 'green';
-      mangoN.style.backgroundColor = 'green';
-      mangoG.style.backgroundColor = 'green';
-      mangoO.style.backgroundColor = 'green';
+      mangoM.style.backgroundColor = 'lightgreen';
+      mangoA.style.backgroundColor = 'lightgreen';
+      mangoN.style.backgroundColor = 'lightgreen';
+      mangoG.style.backgroundColor = 'lightgreen';
+      mangoO.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#mango');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2036,19 +2058,19 @@ let generateNamesTwo = () => {
   });
   // A
   mangoA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mangoM.style.backgroundColor === 'red' &&
-      mangoA.style.backgroundColor === 'red' &&
-      mangoN.style.backgroundColor === 'red' &&
-      mangoG.style.backgroundColor === 'red' &&
-      mangoO.style.backgroundColor === 'red'
+      mangoM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoO.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mangoM.style.backgroundColor = 'green';
-      mangoA.style.backgroundColor = 'green';
-      mangoN.style.backgroundColor = 'green';
-      mangoG.style.backgroundColor = 'green';
-      mangoO.style.backgroundColor = 'green';
+      mangoM.style.backgroundColor = 'lightgreen';
+      mangoA.style.backgroundColor = 'lightgreen';
+      mangoN.style.backgroundColor = 'lightgreen';
+      mangoG.style.backgroundColor = 'lightgreen';
+      mangoO.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#mango');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2056,19 +2078,19 @@ let generateNamesTwo = () => {
   });
   // N
   mangoN.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mangoM.style.backgroundColor === 'red' &&
-      mangoA.style.backgroundColor === 'red' &&
-      mangoN.style.backgroundColor === 'red' &&
-      mangoG.style.backgroundColor === 'red' &&
-      mangoO.style.backgroundColor === 'red'
+      mangoM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoO.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mangoM.style.backgroundColor = 'green';
-      mangoA.style.backgroundColor = 'green';
-      mangoN.style.backgroundColor = 'green';
-      mangoG.style.backgroundColor = 'green';
-      mangoO.style.backgroundColor = 'green';
+      mangoM.style.backgroundColor = 'lightgreen';
+      mangoA.style.backgroundColor = 'lightgreen';
+      mangoN.style.backgroundColor = 'lightgreen';
+      mangoG.style.backgroundColor = 'lightgreen';
+      mangoO.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#mango');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2076,19 +2098,19 @@ let generateNamesTwo = () => {
   });
   // G
   mangoG.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mangoM.style.backgroundColor === 'red' &&
-      mangoA.style.backgroundColor === 'red' &&
-      mangoN.style.backgroundColor === 'red' &&
-      mangoG.style.backgroundColor === 'red' &&
-      mangoO.style.backgroundColor === 'red'
+      mangoM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoO.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mangoM.style.backgroundColor = 'green';
-      mangoA.style.backgroundColor = 'green';
-      mangoN.style.backgroundColor = 'green';
-      mangoG.style.backgroundColor = 'green';
-      mangoO.style.backgroundColor = 'green';
+      mangoM.style.backgroundColor = 'lightgreen';
+      mangoA.style.backgroundColor = 'lightgreen';
+      mangoN.style.backgroundColor = 'lightgreen';
+      mangoG.style.backgroundColor = 'lightgreen';
+      mangoO.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#mango');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2096,19 +2118,19 @@ let generateNamesTwo = () => {
   });
   // O
   mangoO.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mangoM.style.backgroundColor === 'red' &&
-      mangoA.style.backgroundColor === 'red' &&
-      mangoN.style.backgroundColor === 'red' &&
-      mangoG.style.backgroundColor === 'red' &&
-      mangoO.style.backgroundColor === 'red'
+      mangoM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoG.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mangoO.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mangoM.style.backgroundColor = 'green';
-      mangoA.style.backgroundColor = 'green';
-      mangoN.style.backgroundColor = 'green';
-      mangoG.style.backgroundColor = 'green';
-      mangoO.style.backgroundColor = 'green';
+      mangoM.style.backgroundColor = 'lightgreen';
+      mangoA.style.backgroundColor = 'lightgreen';
+      mangoN.style.backgroundColor = 'lightgreen';
+      mangoG.style.backgroundColor = 'lightgreen';
+      mangoO.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#mango');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2117,19 +2139,19 @@ let generateNamesTwo = () => {
   // PEACH
   // P
   peachP.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      peachP.style.backgroundColor === 'red' &&
-      peachE.style.backgroundColor === 'red' &&
-      peachA.style.backgroundColor === 'red' &&
-      peachC.style.backgroundColor === 'red' &&
-      peachH.style.backgroundColor === 'red'
+      peachP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachH.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      peachP.style.backgroundColor = 'green';
-      peachE.style.backgroundColor = 'green';
-      peachA.style.backgroundColor = 'green';
-      peachC.style.backgroundColor = 'green';
-      peachH.style.backgroundColor = 'green';
+      peachP.style.backgroundColor = 'lightgreen';
+      peachE.style.backgroundColor = 'lightgreen';
+      peachA.style.backgroundColor = 'lightgreen';
+      peachC.style.backgroundColor = 'lightgreen';
+      peachH.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#peach');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2137,19 +2159,19 @@ let generateNamesTwo = () => {
   });
   // E
   peachE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      peachP.style.backgroundColor === 'red' &&
-      peachE.style.backgroundColor === 'red' &&
-      peachA.style.backgroundColor === 'red' &&
-      peachC.style.backgroundColor === 'red' &&
-      peachH.style.backgroundColor === 'red'
+      peachP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachH.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      peachP.style.backgroundColor = 'green';
-      peachE.style.backgroundColor = 'green';
-      peachA.style.backgroundColor = 'green';
-      peachC.style.backgroundColor = 'green';
-      peachH.style.backgroundColor = 'green';
+      peachP.style.backgroundColor = 'lightgreen';
+      peachE.style.backgroundColor = 'lightgreen';
+      peachA.style.backgroundColor = 'lightgreen';
+      peachC.style.backgroundColor = 'lightgreen';
+      peachH.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#peach');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2157,19 +2179,19 @@ let generateNamesTwo = () => {
   });
   // A
   peachA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      peachP.style.backgroundColor === 'red' &&
-      peachE.style.backgroundColor === 'red' &&
-      peachA.style.backgroundColor === 'red' &&
-      peachC.style.backgroundColor === 'red' &&
-      peachH.style.backgroundColor === 'red'
+      peachP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachH.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      peachP.style.backgroundColor = 'green';
-      peachE.style.backgroundColor = 'green';
-      peachA.style.backgroundColor = 'green';
-      peachC.style.backgroundColor = 'green';
-      peachH.style.backgroundColor = 'green';
+      peachP.style.backgroundColor = 'lightgreen';
+      peachE.style.backgroundColor = 'lightgreen';
+      peachA.style.backgroundColor = 'lightgreen';
+      peachC.style.backgroundColor = 'lightgreen';
+      peachH.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#peach');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2177,19 +2199,19 @@ let generateNamesTwo = () => {
   });
   // C
   peachC.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      peachP.style.backgroundColor === 'red' &&
-      peachE.style.backgroundColor === 'red' &&
-      peachA.style.backgroundColor === 'red' &&
-      peachC.style.backgroundColor === 'red' &&
-      peachH.style.backgroundColor === 'red'
+      peachP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachH.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      peachP.style.backgroundColor = 'green';
-      peachE.style.backgroundColor = 'green';
-      peachA.style.backgroundColor = 'green';
-      peachC.style.backgroundColor = 'green';
-      peachH.style.backgroundColor = 'green';
+      peachP.style.backgroundColor = 'lightgreen';
+      peachE.style.backgroundColor = 'lightgreen';
+      peachA.style.backgroundColor = 'lightgreen';
+      peachC.style.backgroundColor = 'lightgreen';
+      peachH.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#peach');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2197,19 +2219,19 @@ let generateNamesTwo = () => {
   });
   // H
   peachH.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      peachP.style.backgroundColor === 'red' &&
-      peachE.style.backgroundColor === 'red' &&
-      peachA.style.backgroundColor === 'red' &&
-      peachC.style.backgroundColor === 'red' &&
-      peachH.style.backgroundColor === 'red'
+      peachP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      peachH.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      peachP.style.backgroundColor = 'green';
-      peachE.style.backgroundColor = 'green';
-      peachA.style.backgroundColor = 'green';
-      peachC.style.backgroundColor = 'green';
-      peachH.style.backgroundColor = 'green';
+      peachP.style.backgroundColor = 'lightgreen';
+      peachE.style.backgroundColor = 'lightgreen';
+      peachA.style.backgroundColor = 'lightgreen';
+      peachC.style.backgroundColor = 'lightgreen';
+      peachH.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#peach');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2337,7 +2359,8 @@ const startGameLevelThree = () => {
   returntoMainButton.setAttribute('id', 'returntoMainButton');
   returntoMainButton.setAttribute('class', 'button-invisible');
   returntoMainButton.innerText = 'RETURN TO MAIN MENU';
-  wordBox.appendChild(returntoMainButton);
+  document.getElementById("rules-text").innerText ="Just in case you forgot, here are the rules:"
+  containerB.appendChild(returntoMainButton);
 
   // RETURN TO MAIN MENU
   document
@@ -2356,7 +2379,7 @@ const startGameLevelThree = () => {
   let alphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
   let alphabetArray = alphabet.split(' ');
 
-  for (let i = 0; i < 600; i++) {
+  for (let i = 0; i < 460; i++) {
     let numberGen = Math.floor(Math.random() * 26);
 
     let singleBlock = document.createElement('div');
@@ -2400,7 +2423,7 @@ const startGameLevelThree = () => {
         .classList.add('button-visible');
       timer.innerText = '🏆You won!🏆';
       document.querySelector('#startLevel3').style.backgroundColor =
-        'limegreen';
+        'lightgreen';
       document.querySelector('#tough-status').innerText = "complete!"
     }
   };
@@ -2427,25 +2450,25 @@ let generateNamesThree = () => {
   arrayY.className = 'singleBlockTestLevelThree';
   arrayY.innerText = 'Y';
   // REVERSE SETUP
-  let reverseR1 = document.getElementById('400');
+  let reverseR1 = document.getElementById('320');
   reverseR1.className = 'singleBlockTestLevelThree';
   reverseR1.innerText = 'R';
-  let reverseE1 = document.getElementById('420');
+  let reverseE1 = document.getElementById('340');
   reverseE1.className = 'singleBlockTestLevelThree';
   reverseE1.innerText = 'E';
-  let reverseV = document.getElementById('440');
+  let reverseV = document.getElementById('360');
   reverseV.className = 'singleBlockTestLevelThree';
   reverseV.innerText = 'V';
-  let reverseE2 = document.getElementById('460');
+  let reverseE2 = document.getElementById('380');
   reverseE2.className = 'singleBlockTestLevelThree';
   reverseE2.innerText = 'E';
-  let reverseR2 = document.getElementById('480');
+  let reverseR2 = document.getElementById('400');
   reverseR2.className = 'singleBlockTestLevelThree';
   reverseR2.innerText = 'R';
-  let reverseS = document.getElementById('500');
+  let reverseS = document.getElementById('420');
   reverseS.className = 'singleBlockTestLevelThree';
   reverseS.innerText = 'S';
-  let reverseE3 = document.getElementById('520');
+  let reverseE3 = document.getElementById('440');
   reverseE3.className = 'singleBlockTestLevelThree';
   reverseE3.innerText = 'E';
   // MAP SETUP
@@ -2474,69 +2497,69 @@ let generateNamesThree = () => {
   sortT.innerText = 'T';
 
   // REDUCE SETUP
-  let reduceR = document.getElementById('573');
+  let reduceR = document.getElementById('445');
   reduceR.className = 'singleBlockTestLevelThree';
   reduceR.innerText = 'R';
-  let reduceE1 = document.getElementById('574');
+  let reduceE1 = document.getElementById('446');
   reduceE1.className = 'singleBlockTestLevelThree';
   reduceE1.innerText = 'E';
-  let reduceD = document.getElementById('575');
+  let reduceD = document.getElementById('447');
   reduceD.className = 'singleBlockTestLevelThree';
   reduceD.innerText = 'D';
-  let reduceU = document.getElementById('576');
+  let reduceU = document.getElementById('448');
   reduceU.className = 'singleBlockTestLevelThree';
   reduceU.innerText = 'U';
-  let reduceC = document.getElementById('577');
+  let reduceC = document.getElementById('449');
   reduceC.className = 'singleBlockTestLevelThree';
   reduceC.innerText = 'C';
-  let reduceE2 = document.getElementById('578');
+  let reduceE2 = document.getElementById('450');
   reduceE2.className = 'singleBlockTestLevelThree';
   reduceE2.innerText = 'E';
   // OPERATOR SETUP
-  let operatorO1 = document.getElementById('410');
+  let operatorO1 = document.getElementById('452');
   operatorO1.className = 'singleBlockTestLevelThree';
   operatorO1.innerText = 'O';
-  let operatorP = document.getElementById('411');
+  let operatorP = document.getElementById('433');
   operatorP.className = 'singleBlockTestLevelThree';
   operatorP.innerText = 'P';
-  let operatorE = document.getElementById('412');
+  let operatorE = document.getElementById('414');
   operatorE.className = 'singleBlockTestLevelThree';
   operatorE.innerText = 'E';
-  let operatorR1 = document.getElementById('413');
+  let operatorR1 = document.getElementById('395');
   operatorR1.className = 'singleBlockTestLevelThree';
   operatorR1.innerText = 'R';
-  let operatorA = document.getElementById('414');
+  let operatorA = document.getElementById('376');
   operatorA.className = 'singleBlockTestLevelThree';
   operatorA.innerText = 'A';
-  let operatorT = document.getElementById('415');
+  let operatorT = document.getElementById('357');
   operatorT.className = 'singleBlockTestLevelThree';
   operatorT.innerText = 'T';
-  let operatorO2 = document.getElementById('416');
+  let operatorO2 = document.getElementById('338');
   operatorO2.className = 'singleBlockTestLevelThree';
   operatorO2.innerText = 'O';
-  let operatorR2 = document.getElementById('417');
+  let operatorR2 = document.getElementById('319');
   operatorR2.className = 'singleBlockTestLevelThree';
   operatorR2.innerText = 'R';
   // BOOLEAN SETUP
-  let booleanB = document.getElementById('585');
+  let booleanB = document.getElementById('403');
   booleanB.className = 'singleBlockTestLevelThree';
   booleanB.innerText = 'B';
-  let booleanO1 = document.getElementById('566');
+  let booleanO1 = document.getElementById('384');
   booleanO1.className = 'singleBlockTestLevelThree';
   booleanO1.innerText = 'O';
-  let booleanO2 = document.getElementById('547');
+  let booleanO2 = document.getElementById('365');
   booleanO2.className = 'singleBlockTestLevelThree';
   booleanO2.innerText = 'O';
-  let booleanL = document.getElementById('528');
+  let booleanL = document.getElementById('346');
   booleanL.className = 'singleBlockTestLevelThree';
   booleanL.innerText = 'L';
-  let booleanE = document.getElementById('509');
+  let booleanE = document.getElementById('327');
   booleanE.className = 'singleBlockTestLevelThree';
   booleanE.innerText = 'E';
-  let booleanA = document.getElementById('490');
+  let booleanA = document.getElementById('308');
   booleanA.className = 'singleBlockTestLevelThree';
   booleanA.innerText = 'A';
-  let booleanN = document.getElementById('471');
+  let booleanN = document.getElementById('289');
   booleanN.className = 'singleBlockTestLevelThree';
   booleanN.innerText = 'N';
   // REMAINDER SETUP
@@ -2627,19 +2650,19 @@ let generateNamesThree = () => {
   functionN2.className = 'singleBlockTestLevelThree';
   functionN2.innerText = 'N';
   // CLASS SETUP
-  let classC = document.getElementById('250');
+  let classC = document.getElementById('245');
   classC.className = 'singleBlockTestLevelThree';
   classC.innerText = 'C';
-  let classL = document.getElementById('251');
+  let classL = document.getElementById('246');
   classL.className = 'singleBlockTestLevelThree';
   classL.innerText = 'L';
-  let classA = document.getElementById('252');
+  let classA = document.getElementById('247');
   classA.className = 'singleBlockTestLevelThree';
   classA.innerText = 'A';
-  let classS1 = document.getElementById('253');
+  let classS1 = document.getElementById('248');
   classS1.className = 'singleBlockTestLevelThree';
   classS1.innerText = 'S';
-  let classS2 = document.getElementById('254');
+  let classS2 = document.getElementById('249');
   classS2.className = 'singleBlockTestLevelThree';
   classS2.innerText = 'S';
   // ITERATOR SETUP
@@ -2671,19 +2694,19 @@ let generateNamesThree = () => {
   // ARRAY
   // A
   arrayA1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      arrayA1.style.backgroundColor === 'red' &&
-      arrayR1.style.backgroundColor === 'red' &&
-      arrayR2.style.backgroundColor === 'red' &&
-      arrayA2.style.backgroundColor === 'red' &&
-      arrayY.style.backgroundColor === 'red'
+      arrayA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayY.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      arrayA1.style.backgroundColor = 'green';
-      arrayR1.style.backgroundColor = 'green';
-      arrayR2.style.backgroundColor = 'green';
-      arrayA2.style.backgroundColor = 'green';
-      arrayY.style.backgroundColor = 'green';
+      arrayA1.style.backgroundColor = 'lightgreen';
+      arrayR1.style.backgroundColor = 'lightgreen';
+      arrayR2.style.backgroundColor = 'lightgreen';
+      arrayA2.style.backgroundColor = 'lightgreen';
+      arrayY.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#array');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2691,19 +2714,19 @@ let generateNamesThree = () => {
   });
   //R
   arrayR1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      arrayA1.style.backgroundColor === 'red' &&
-      arrayR1.style.backgroundColor === 'red' &&
-      arrayR2.style.backgroundColor === 'red' &&
-      arrayA2.style.backgroundColor === 'red' &&
-      arrayY.style.backgroundColor === 'red'
+      arrayA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayY.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      arrayA1.style.backgroundColor = 'green';
-      arrayR1.style.backgroundColor = 'green';
-      arrayR2.style.backgroundColor = 'green';
-      arrayA2.style.backgroundColor = 'green';
-      arrayY.style.backgroundColor = 'green';
+      arrayA1.style.backgroundColor = 'lightgreen';
+      arrayR1.style.backgroundColor = 'lightgreen';
+      arrayR2.style.backgroundColor = 'lightgreen';
+      arrayA2.style.backgroundColor = 'lightgreen';
+      arrayY.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#array');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2711,19 +2734,19 @@ let generateNamesThree = () => {
   });
   // R
   arrayR2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      arrayA1.style.backgroundColor === 'red' &&
-      arrayR1.style.backgroundColor === 'red' &&
-      arrayR2.style.backgroundColor === 'red' &&
-      arrayA2.style.backgroundColor === 'red' &&
-      arrayY.style.backgroundColor === 'red'
+      arrayA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayY.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      arrayA1.style.backgroundColor = 'green';
-      arrayR1.style.backgroundColor = 'green';
-      arrayR2.style.backgroundColor = 'green';
-      arrayA2.style.backgroundColor = 'green';
-      arrayY.style.backgroundColor = 'green';
+      arrayA1.style.backgroundColor = 'lightgreen';
+      arrayR1.style.backgroundColor = 'lightgreen';
+      arrayR2.style.backgroundColor = 'lightgreen';
+      arrayA2.style.backgroundColor = 'lightgreen';
+      arrayY.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#array');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2731,19 +2754,19 @@ let generateNamesThree = () => {
   });
   // A
   arrayA2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      arrayA1.style.backgroundColor === 'red' &&
-      arrayR1.style.backgroundColor === 'red' &&
-      arrayR2.style.backgroundColor === 'red' &&
-      arrayA2.style.backgroundColor === 'red' &&
-      arrayY.style.backgroundColor === 'red'
+      arrayA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayY.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      arrayA1.style.backgroundColor = 'green';
-      arrayR1.style.backgroundColor = 'green';
-      arrayR2.style.backgroundColor = 'green';
-      arrayA2.style.backgroundColor = 'green';
-      arrayY.style.backgroundColor = 'green';
+      arrayA1.style.backgroundColor = 'lightgreen';
+      arrayR1.style.backgroundColor = 'lightgreen';
+      arrayR2.style.backgroundColor = 'lightgreen';
+      arrayA2.style.backgroundColor = 'lightgreen';
+      arrayY.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#array');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2751,19 +2774,19 @@ let generateNamesThree = () => {
   });
   // Y
   arrayY.addEventListener('mouseup', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      arrayA1.style.backgroundColor === 'red' &&
-      arrayR1.style.backgroundColor === 'red' &&
-      arrayR2.style.backgroundColor === 'red' &&
-      arrayA2.style.backgroundColor === 'red' &&
-      arrayY.style.backgroundColor === 'red'
+      arrayA1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayA2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      arrayY.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      arrayA1.style.backgroundColor = 'green';
-      arrayR1.style.backgroundColor = 'green';
-      arrayR2.style.backgroundColor = 'green';
-      arrayA2.style.backgroundColor = 'green';
-      arrayY.style.backgroundColor = 'green';
+      arrayA1.style.backgroundColor = 'lightgreen';
+      arrayR1.style.backgroundColor = 'lightgreen';
+      arrayR2.style.backgroundColor = 'lightgreen';
+      arrayA2.style.backgroundColor = 'lightgreen';
+      arrayY.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#array');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2772,23 +2795,23 @@ let generateNamesThree = () => {
   // REVERSE
   // R
   reverseR1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reverseR1.style.backgroundColor === 'red' &&
-      reverseE1.style.backgroundColor === 'red' &&
-      reverseV.style.backgroundColor === 'red' &&
-      reverseE2.style.backgroundColor === 'red' &&
-      reverseR2.style.backgroundColor === 'red' &&
-      reverseS.style.backgroundColor === 'red' &&
-      reverseE3.style.backgroundColor === 'red'
+      reverseR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseV.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reverseR1.style.backgroundColor = 'green';
-      reverseE1.style.backgroundColor = 'green';
-      reverseV.style.backgroundColor = 'green';
-      reverseE2.style.backgroundColor = 'green';
-      reverseR2.style.backgroundColor = 'green';
-      reverseS.style.backgroundColor = 'green';
-      reverseE3.style.backgroundColor = 'green';
+      reverseR1.style.backgroundColor = 'lightgreen';
+      reverseE1.style.backgroundColor = 'lightgreen';
+      reverseV.style.backgroundColor = 'lightgreen';
+      reverseE2.style.backgroundColor = 'lightgreen';
+      reverseR2.style.backgroundColor = 'lightgreen';
+      reverseS.style.backgroundColor = 'lightgreen';
+      reverseE3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reverse');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2796,23 +2819,23 @@ let generateNamesThree = () => {
   });
   // E
   reverseE1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reverseR1.style.backgroundColor === 'red' &&
-      reverseE1.style.backgroundColor === 'red' &&
-      reverseV.style.backgroundColor === 'red' &&
-      reverseE2.style.backgroundColor === 'red' &&
-      reverseR2.style.backgroundColor === 'red' &&
-      reverseS.style.backgroundColor === 'red' &&
-      reverseE3.style.backgroundColor === 'red'
+      reverseR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseV.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reverseR1.style.backgroundColor = 'green';
-      reverseE1.style.backgroundColor = 'green';
-      reverseV.style.backgroundColor = 'green';
-      reverseE2.style.backgroundColor = 'green';
-      reverseR2.style.backgroundColor = 'green';
-      reverseS.style.backgroundColor = 'green';
-      reverseE3.style.backgroundColor = 'green';
+      reverseR1.style.backgroundColor = 'lightgreen';
+      reverseE1.style.backgroundColor = 'lightgreen';
+      reverseV.style.backgroundColor = 'lightgreen';
+      reverseE2.style.backgroundColor = 'lightgreen';
+      reverseR2.style.backgroundColor = 'lightgreen';
+      reverseS.style.backgroundColor = 'lightgreen';
+      reverseE3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reverse');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2820,23 +2843,23 @@ let generateNamesThree = () => {
   });
   // V
   reverseV.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reverseR1.style.backgroundColor === 'red' &&
-      reverseE1.style.backgroundColor === 'red' &&
-      reverseV.style.backgroundColor === 'red' &&
-      reverseE2.style.backgroundColor === 'red' &&
-      reverseR2.style.backgroundColor === 'red' &&
-      reverseS.style.backgroundColor === 'red' &&
-      reverseE3.style.backgroundColor === 'red'
+      reverseR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseV.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reverseR1.style.backgroundColor = 'green';
-      reverseE1.style.backgroundColor = 'green';
-      reverseV.style.backgroundColor = 'green';
-      reverseE2.style.backgroundColor = 'green';
-      reverseR2.style.backgroundColor = 'green';
-      reverseS.style.backgroundColor = 'green';
-      reverseE3.style.backgroundColor = 'green';
+      reverseR1.style.backgroundColor = 'lightgreen';
+      reverseE1.style.backgroundColor = 'lightgreen';
+      reverseV.style.backgroundColor = 'lightgreen';
+      reverseE2.style.backgroundColor = 'lightgreen';
+      reverseR2.style.backgroundColor = 'lightgreen';
+      reverseS.style.backgroundColor = 'lightgreen';
+      reverseE3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reverse');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2844,23 +2867,23 @@ let generateNamesThree = () => {
   });
   // E
   reverseE2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reverseR1.style.backgroundColor === 'red' &&
-      reverseE1.style.backgroundColor === 'red' &&
-      reverseV.style.backgroundColor === 'red' &&
-      reverseE2.style.backgroundColor === 'red' &&
-      reverseR2.style.backgroundColor === 'red' &&
-      reverseS.style.backgroundColor === 'red' &&
-      reverseE3.style.backgroundColor === 'red'
+      reverseR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseV.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reverseR1.style.backgroundColor = 'green';
-      reverseE1.style.backgroundColor = 'green';
-      reverseV.style.backgroundColor = 'green';
-      reverseE2.style.backgroundColor = 'green';
-      reverseR2.style.backgroundColor = 'green';
-      reverseS.style.backgroundColor = 'green';
-      reverseE3.style.backgroundColor = 'green';
+      reverseR1.style.backgroundColor = 'lightgreen';
+      reverseE1.style.backgroundColor = 'lightgreen';
+      reverseV.style.backgroundColor = 'lightgreen';
+      reverseE2.style.backgroundColor = 'lightgreen';
+      reverseR2.style.backgroundColor = 'lightgreen';
+      reverseS.style.backgroundColor = 'lightgreen';
+      reverseE3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reverse');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2868,23 +2891,23 @@ let generateNamesThree = () => {
   });
   // R
   reverseR2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reverseR1.style.backgroundColor === 'red' &&
-      reverseE1.style.backgroundColor === 'red' &&
-      reverseV.style.backgroundColor === 'red' &&
-      reverseE2.style.backgroundColor === 'red' &&
-      reverseR2.style.backgroundColor === 'red' &&
-      reverseS.style.backgroundColor === 'red' &&
-      reverseE3.style.backgroundColor === 'red'
+      reverseR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseV.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reverseR1.style.backgroundColor = 'green';
-      reverseE1.style.backgroundColor = 'green';
-      reverseV.style.backgroundColor = 'green';
-      reverseE2.style.backgroundColor = 'green';
-      reverseR2.style.backgroundColor = 'green';
-      reverseS.style.backgroundColor = 'green';
-      reverseE3.style.backgroundColor = 'green';
+      reverseR1.style.backgroundColor = 'lightgreen';
+      reverseE1.style.backgroundColor = 'lightgreen';
+      reverseV.style.backgroundColor = 'lightgreen';
+      reverseE2.style.backgroundColor = 'lightgreen';
+      reverseR2.style.backgroundColor = 'lightgreen';
+      reverseS.style.backgroundColor = 'lightgreen';
+      reverseE3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reverse');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2892,23 +2915,23 @@ let generateNamesThree = () => {
   });
   // S
   reverseS.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reverseR1.style.backgroundColor === 'red' &&
-      reverseE1.style.backgroundColor === 'red' &&
-      reverseV.style.backgroundColor === 'red' &&
-      reverseE2.style.backgroundColor === 'red' &&
-      reverseR2.style.backgroundColor === 'red' &&
-      reverseS.style.backgroundColor === 'red' &&
-      reverseE3.style.backgroundColor === 'red'
+      reverseR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseV.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reverseR1.style.backgroundColor = 'green';
-      reverseE1.style.backgroundColor = 'green';
-      reverseV.style.backgroundColor = 'green';
-      reverseE2.style.backgroundColor = 'green';
-      reverseR2.style.backgroundColor = 'green';
-      reverseS.style.backgroundColor = 'green';
-      reverseE3.style.backgroundColor = 'green';
+      reverseR1.style.backgroundColor = 'lightgreen';
+      reverseE1.style.backgroundColor = 'lightgreen';
+      reverseV.style.backgroundColor = 'lightgreen';
+      reverseE2.style.backgroundColor = 'lightgreen';
+      reverseR2.style.backgroundColor = 'lightgreen';
+      reverseS.style.backgroundColor = 'lightgreen';
+      reverseE3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reverse');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2916,23 +2939,23 @@ let generateNamesThree = () => {
   });
   // E
   reverseE3.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reverseR1.style.backgroundColor === 'red' &&
-      reverseE1.style.backgroundColor === 'red' &&
-      reverseV.style.backgroundColor === 'red' &&
-      reverseE2.style.backgroundColor === 'red' &&
-      reverseR2.style.backgroundColor === 'red' &&
-      reverseS.style.backgroundColor === 'red' &&
-      reverseE3.style.backgroundColor === 'red'
+      reverseR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseV.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseR2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reverseE3.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reverseR1.style.backgroundColor = 'green';
-      reverseE1.style.backgroundColor = 'green';
-      reverseV.style.backgroundColor = 'green';
-      reverseE2.style.backgroundColor = 'green';
-      reverseR2.style.backgroundColor = 'green';
-      reverseS.style.backgroundColor = 'green';
-      reverseE3.style.backgroundColor = 'green';
+      reverseR1.style.backgroundColor = 'lightgreen';
+      reverseE1.style.backgroundColor = 'lightgreen';
+      reverseV.style.backgroundColor = 'lightgreen';
+      reverseE2.style.backgroundColor = 'lightgreen';
+      reverseR2.style.backgroundColor = 'lightgreen';
+      reverseS.style.backgroundColor = 'lightgreen';
+      reverseE3.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reverse');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2941,15 +2964,15 @@ let generateNamesThree = () => {
   // MAP
   // M
   mapM.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mapM.style.backgroundColor === 'red' &&
-      mapA.style.backgroundColor === 'red' &&
-      mapP.style.backgroundColor === 'red'
+      mapM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mapA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mapP.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mapM.style.backgroundColor = 'green';
-      mapA.style.backgroundColor = 'green';
-      mapP.style.backgroundColor = 'green';
+      mapM.style.backgroundColor = 'lightgreen';
+      mapA.style.backgroundColor = 'lightgreen';
+      mapP.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#map');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2957,15 +2980,15 @@ let generateNamesThree = () => {
   });
   // A
   mapA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mapM.style.backgroundColor === 'red' &&
-      mapA.style.backgroundColor === 'red' &&
-      mapP.style.backgroundColor === 'red'
+      mapM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mapA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mapP.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mapM.style.backgroundColor = 'green';
-      mapA.style.backgroundColor = 'green';
-      mapP.style.backgroundColor = 'green';
+      mapM.style.backgroundColor = 'lightgreen';
+      mapA.style.backgroundColor = 'lightgreen';
+      mapP.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#map');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2973,15 +2996,15 @@ let generateNamesThree = () => {
   });
   // P
   mapP.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      mapM.style.backgroundColor === 'red' &&
-      mapA.style.backgroundColor === 'red' &&
-      mapP.style.backgroundColor === 'red'
+      mapM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mapA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      mapP.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      mapM.style.backgroundColor = 'green';
-      mapA.style.backgroundColor = 'green';
-      mapP.style.backgroundColor = 'green';
+      mapM.style.backgroundColor = 'lightgreen';
+      mapA.style.backgroundColor = 'lightgreen';
+      mapP.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#map');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -2990,17 +3013,17 @@ let generateNamesThree = () => {
   // SORT
   // S
   sortS.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      sortS.style.backgroundColor === 'red' &&
-      sortO.style.backgroundColor === 'red' &&
-      sortR.style.backgroundColor === 'red' &&
-      sortT.style.backgroundColor === 'red'
+      sortS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortT.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sortS.style.backgroundColor = 'green';
-      sortO.style.backgroundColor = 'green';
-      sortR.style.backgroundColor = 'green';
-      sortT.style.backgroundColor = 'green';
+      sortS.style.backgroundColor = 'lightgreen';
+      sortO.style.backgroundColor = 'lightgreen';
+      sortR.style.backgroundColor = 'lightgreen';
+      sortT.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sort');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3008,17 +3031,17 @@ let generateNamesThree = () => {
   });
   // O
   sortO.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      sortS.style.backgroundColor === 'red' &&
-      sortO.style.backgroundColor === 'red' &&
-      sortR.style.backgroundColor === 'red' &&
-      sortT.style.backgroundColor === 'red'
+      sortS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortT.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sortS.style.backgroundColor = 'green';
-      sortO.style.backgroundColor = 'green';
-      sortR.style.backgroundColor = 'green';
-      sortT.style.backgroundColor = 'green';
+      sortS.style.backgroundColor = 'lightgreen';
+      sortO.style.backgroundColor = 'lightgreen';
+      sortR.style.backgroundColor = 'lightgreen';
+      sortT.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sort');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3026,17 +3049,17 @@ let generateNamesThree = () => {
   });
   // R
   sortR.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      sortS.style.backgroundColor === 'red' &&
-      sortO.style.backgroundColor === 'red' &&
-      sortR.style.backgroundColor === 'red' &&
-      sortT.style.backgroundColor === 'red'
+      sortS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortT.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sortS.style.backgroundColor = 'green';
-      sortO.style.backgroundColor = 'green';
-      sortR.style.backgroundColor = 'green';
-      sortT.style.backgroundColor = 'green';
+      sortS.style.backgroundColor = 'lightgreen';
+      sortO.style.backgroundColor = 'lightgreen';
+      sortR.style.backgroundColor = 'lightgreen';
+      sortT.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sort');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3044,17 +3067,17 @@ let generateNamesThree = () => {
   });
   // T
   sortT.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      sortS.style.backgroundColor === 'red' &&
-      sortO.style.backgroundColor === 'red' &&
-      sortR.style.backgroundColor === 'red' &&
-      sortT.style.backgroundColor === 'red'
+      sortS.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      sortT.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      sortS.style.backgroundColor = 'green';
-      sortO.style.backgroundColor = 'green';
-      sortR.style.backgroundColor = 'green';
-      sortT.style.backgroundColor = 'green';
+      sortS.style.backgroundColor = 'lightgreen';
+      sortO.style.backgroundColor = 'lightgreen';
+      sortR.style.backgroundColor = 'lightgreen';
+      sortT.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#sort');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3064,21 +3087,21 @@ let generateNamesThree = () => {
   // REDUCE
   // R
   reduceR.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reduceR.style.backgroundColor === 'red' &&
-      reduceE1.style.backgroundColor === 'red' &&
-      reduceD.style.backgroundColor === 'red' &&
-      reduceU.style.backgroundColor === 'red' &&
-      reduceC.style.backgroundColor === 'red' &&
-      reduceE2.style.backgroundColor === 'red'
+      reduceR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reduceR.style.backgroundColor = 'green';
-      reduceE1.style.backgroundColor = 'green';
-      reduceD.style.backgroundColor = 'green';
-      reduceU.style.backgroundColor = 'green';
-      reduceC.style.backgroundColor = 'green';
-      reduceE2.style.backgroundColor = 'green';
+      reduceR.style.backgroundColor = 'lightgreen';
+      reduceE1.style.backgroundColor = 'lightgreen';
+      reduceD.style.backgroundColor = 'lightgreen';
+      reduceU.style.backgroundColor = 'lightgreen';
+      reduceC.style.backgroundColor = 'lightgreen';
+      reduceE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reduce');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3086,21 +3109,21 @@ let generateNamesThree = () => {
   });
   // E
   reduceE1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reduceR.style.backgroundColor === 'red' &&
-      reduceE1.style.backgroundColor === 'red' &&
-      reduceD.style.backgroundColor === 'red' &&
-      reduceU.style.backgroundColor === 'red' &&
-      reduceC.style.backgroundColor === 'red' &&
-      reduceE2.style.backgroundColor === 'red'
+      reduceR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reduceR.style.backgroundColor = 'green';
-      reduceE1.style.backgroundColor = 'green';
-      reduceD.style.backgroundColor = 'green';
-      reduceU.style.backgroundColor = 'green';
-      reduceC.style.backgroundColor = 'green';
-      reduceE2.style.backgroundColor = 'green';
+      reduceR.style.backgroundColor = 'lightgreen';
+      reduceE1.style.backgroundColor = 'lightgreen';
+      reduceD.style.backgroundColor = 'lightgreen';
+      reduceU.style.backgroundColor = 'lightgreen';
+      reduceC.style.backgroundColor = 'lightgreen';
+      reduceE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reduce');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3108,21 +3131,21 @@ let generateNamesThree = () => {
   });
   // D
   reduceD.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reduceR.style.backgroundColor === 'red' &&
-      reduceE1.style.backgroundColor === 'red' &&
-      reduceD.style.backgroundColor === 'red' &&
-      reduceU.style.backgroundColor === 'red' &&
-      reduceC.style.backgroundColor === 'red' &&
-      reduceE2.style.backgroundColor === 'red'
+      reduceR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reduceR.style.backgroundColor = 'green';
-      reduceE1.style.backgroundColor = 'green';
-      reduceD.style.backgroundColor = 'green';
-      reduceU.style.backgroundColor = 'green';
-      reduceC.style.backgroundColor = 'green';
-      reduceE2.style.backgroundColor = 'green';
+      reduceR.style.backgroundColor = 'lightgreen';
+      reduceE1.style.backgroundColor = 'lightgreen';
+      reduceD.style.backgroundColor = 'lightgreen';
+      reduceU.style.backgroundColor = 'lightgreen';
+      reduceC.style.backgroundColor = 'lightgreen';
+      reduceE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reduce');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3130,21 +3153,21 @@ let generateNamesThree = () => {
   });
   // U
   reduceU.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reduceR.style.backgroundColor === 'red' &&
-      reduceE1.style.backgroundColor === 'red' &&
-      reduceD.style.backgroundColor === 'red' &&
-      reduceU.style.backgroundColor === 'red' &&
-      reduceC.style.backgroundColor === 'red' &&
-      reduceE2.style.backgroundColor === 'red'
+      reduceR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reduceR.style.backgroundColor = 'green';
-      reduceE1.style.backgroundColor = 'green';
-      reduceD.style.backgroundColor = 'green';
-      reduceU.style.backgroundColor = 'green';
-      reduceC.style.backgroundColor = 'green';
-      reduceE2.style.backgroundColor = 'green';
+      reduceR.style.backgroundColor = 'lightgreen';
+      reduceE1.style.backgroundColor = 'lightgreen';
+      reduceD.style.backgroundColor = 'lightgreen';
+      reduceU.style.backgroundColor = 'lightgreen';
+      reduceC.style.backgroundColor = 'lightgreen';
+      reduceE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reduce');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3152,21 +3175,21 @@ let generateNamesThree = () => {
   });
   // C
   reduceC.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reduceR.style.backgroundColor === 'red' &&
-      reduceE1.style.backgroundColor === 'red' &&
-      reduceD.style.backgroundColor === 'red' &&
-      reduceU.style.backgroundColor === 'red' &&
-      reduceC.style.backgroundColor === 'red' &&
-      reduceE2.style.backgroundColor === 'red'
+      reduceR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reduceR.style.backgroundColor = 'green';
-      reduceE1.style.backgroundColor = 'green';
-      reduceD.style.backgroundColor = 'green';
-      reduceU.style.backgroundColor = 'green';
-      reduceC.style.backgroundColor = 'green';
-      reduceE2.style.backgroundColor = 'green';
+      reduceR.style.backgroundColor = 'lightgreen';
+      reduceE1.style.backgroundColor = 'lightgreen';
+      reduceD.style.backgroundColor = 'lightgreen';
+      reduceU.style.backgroundColor = 'lightgreen';
+      reduceC.style.backgroundColor = 'lightgreen';
+      reduceE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reduce');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3174,21 +3197,21 @@ let generateNamesThree = () => {
   });
   // E
   reduceE2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      reduceR.style.backgroundColor === 'red' &&
-      reduceE1.style.backgroundColor === 'red' &&
-      reduceD.style.backgroundColor === 'red' &&
-      reduceU.style.backgroundColor === 'red' &&
-      reduceC.style.backgroundColor === 'red' &&
-      reduceE2.style.backgroundColor === 'red'
+      reduceR.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      reduceE2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      reduceR.style.backgroundColor = 'green';
-      reduceE1.style.backgroundColor = 'green';
-      reduceD.style.backgroundColor = 'green';
-      reduceU.style.backgroundColor = 'green';
-      reduceC.style.backgroundColor = 'green';
-      reduceE2.style.backgroundColor = 'green';
+      reduceR.style.backgroundColor = 'lightgreen';
+      reduceE1.style.backgroundColor = 'lightgreen';
+      reduceD.style.backgroundColor = 'lightgreen';
+      reduceU.style.backgroundColor = 'lightgreen';
+      reduceC.style.backgroundColor = 'lightgreen';
+      reduceE2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#reduce');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3197,25 +3220,25 @@ let generateNamesThree = () => {
   // OPERATOR
   // O
   operatorO1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3223,25 +3246,25 @@ let generateNamesThree = () => {
   });
   // P
   operatorP.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3249,25 +3272,25 @@ let generateNamesThree = () => {
   });
   // E
   operatorE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3275,25 +3298,25 @@ let generateNamesThree = () => {
   });
   // R
   operatorR1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3301,25 +3324,25 @@ let generateNamesThree = () => {
   });
   // A
   operatorA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3327,25 +3350,25 @@ let generateNamesThree = () => {
   });
   // T
   operatorT.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3353,25 +3376,25 @@ let generateNamesThree = () => {
   });
   // O
   operatorO2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3379,25 +3402,25 @@ let generateNamesThree = () => {
   });
   // R
   operatorR2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      operatorO1.style.backgroundColor === 'red' &&
-      operatorP.style.backgroundColor === 'red' &&
-      operatorE.style.backgroundColor === 'red' &&
-      operatorR1.style.backgroundColor === 'red' &&
-      operatorA.style.backgroundColor === 'red' &&
-      operatorT.style.backgroundColor === 'red' &&
-      operatorO2.style.backgroundColor === 'red' &&
-      operatorR2.style.backgroundColor === 'red'
+      operatorO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorP.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      operatorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      operatorO1.style.backgroundColor = 'green';
-      operatorP.style.backgroundColor = 'green';
-      operatorE.style.backgroundColor = 'green';
-      operatorR1.style.backgroundColor = 'green';
-      operatorA.style.backgroundColor = 'green';
-      operatorT.style.backgroundColor = 'green';
-      operatorO2.style.backgroundColor = 'green';
-      operatorR2.style.backgroundColor = 'green';
+      operatorO1.style.backgroundColor = 'lightgreen';
+      operatorP.style.backgroundColor = 'lightgreen';
+      operatorE.style.backgroundColor = 'lightgreen';
+      operatorR1.style.backgroundColor = 'lightgreen';
+      operatorA.style.backgroundColor = 'lightgreen';
+      operatorT.style.backgroundColor = 'lightgreen';
+      operatorO2.style.backgroundColor = 'lightgreen';
+      operatorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#operator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3406,23 +3429,23 @@ let generateNamesThree = () => {
   // BOOLEAN
   // B
   booleanB.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      booleanB.style.backgroundColor === 'red' &&
-      booleanO1.style.backgroundColor === 'red' &&
-      booleanO2.style.backgroundColor === 'red' &&
-      booleanL.style.backgroundColor === 'red' &&
-      booleanE.style.backgroundColor === 'red' &&
-      booleanA.style.backgroundColor === 'red' &&
-      booleanN.style.backgroundColor === 'red'
+      booleanB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanN.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      booleanB.style.backgroundColor = 'green';
-      booleanO1.style.backgroundColor = 'green';
-      booleanO2.style.backgroundColor = 'green';
-      booleanL.style.backgroundColor = 'green';
-      booleanE.style.backgroundColor = 'green';
-      booleanA.style.backgroundColor = 'green';
-      booleanN.style.backgroundColor = 'green';
+      booleanB.style.backgroundColor = 'lightgreen';
+      booleanO1.style.backgroundColor = 'lightgreen';
+      booleanO2.style.backgroundColor = 'lightgreen';
+      booleanL.style.backgroundColor = 'lightgreen';
+      booleanE.style.backgroundColor = 'lightgreen';
+      booleanA.style.backgroundColor = 'lightgreen';
+      booleanN.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#boolean');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3430,23 +3453,23 @@ let generateNamesThree = () => {
   });
   // O
   booleanO1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      booleanB.style.backgroundColor === 'red' &&
-      booleanO1.style.backgroundColor === 'red' &&
-      booleanO2.style.backgroundColor === 'red' &&
-      booleanL.style.backgroundColor === 'red' &&
-      booleanE.style.backgroundColor === 'red' &&
-      booleanA.style.backgroundColor === 'red' &&
-      booleanN.style.backgroundColor === 'red'
+      booleanB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanN.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      booleanB.style.backgroundColor = 'green';
-      booleanO1.style.backgroundColor = 'green';
-      booleanO2.style.backgroundColor = 'green';
-      booleanL.style.backgroundColor = 'green';
-      booleanE.style.backgroundColor = 'green';
-      booleanA.style.backgroundColor = 'green';
-      booleanN.style.backgroundColor = 'green';
+      booleanB.style.backgroundColor = 'lightgreen';
+      booleanO1.style.backgroundColor = 'lightgreen';
+      booleanO2.style.backgroundColor = 'lightgreen';
+      booleanL.style.backgroundColor = 'lightgreen';
+      booleanE.style.backgroundColor = 'lightgreen';
+      booleanA.style.backgroundColor = 'lightgreen';
+      booleanN.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#boolean');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3454,23 +3477,23 @@ let generateNamesThree = () => {
   });
   // O
   booleanO2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      booleanB.style.backgroundColor === 'red' &&
-      booleanO1.style.backgroundColor === 'red' &&
-      booleanO2.style.backgroundColor === 'red' &&
-      booleanL.style.backgroundColor === 'red' &&
-      booleanE.style.backgroundColor === 'red' &&
-      booleanA.style.backgroundColor === 'red' &&
-      booleanN.style.backgroundColor === 'red'
+      booleanB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanN.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      booleanB.style.backgroundColor = 'green';
-      booleanO1.style.backgroundColor = 'green';
-      booleanO2.style.backgroundColor = 'green';
-      booleanL.style.backgroundColor = 'green';
-      booleanE.style.backgroundColor = 'green';
-      booleanA.style.backgroundColor = 'green';
-      booleanN.style.backgroundColor = 'green';
+      booleanB.style.backgroundColor = 'lightgreen';
+      booleanO1.style.backgroundColor = 'lightgreen';
+      booleanO2.style.backgroundColor = 'lightgreen';
+      booleanL.style.backgroundColor = 'lightgreen';
+      booleanE.style.backgroundColor = 'lightgreen';
+      booleanA.style.backgroundColor = 'lightgreen';
+      booleanN.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#boolean');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3478,23 +3501,23 @@ let generateNamesThree = () => {
   });
   // L
   booleanL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      booleanB.style.backgroundColor === 'red' &&
-      booleanO1.style.backgroundColor === 'red' &&
-      booleanO2.style.backgroundColor === 'red' &&
-      booleanL.style.backgroundColor === 'red' &&
-      booleanE.style.backgroundColor === 'red' &&
-      booleanA.style.backgroundColor === 'red' &&
-      booleanN.style.backgroundColor === 'red'
+      booleanB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanN.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      booleanB.style.backgroundColor = 'green';
-      booleanO1.style.backgroundColor = 'green';
-      booleanO2.style.backgroundColor = 'green';
-      booleanL.style.backgroundColor = 'green';
-      booleanE.style.backgroundColor = 'green';
-      booleanA.style.backgroundColor = 'green';
-      booleanN.style.backgroundColor = 'green';
+      booleanB.style.backgroundColor = 'lightgreen';
+      booleanO1.style.backgroundColor = 'lightgreen';
+      booleanO2.style.backgroundColor = 'lightgreen';
+      booleanL.style.backgroundColor = 'lightgreen';
+      booleanE.style.backgroundColor = 'lightgreen';
+      booleanA.style.backgroundColor = 'lightgreen';
+      booleanN.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#boolean');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3502,23 +3525,23 @@ let generateNamesThree = () => {
   });
   // E
   booleanE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      booleanB.style.backgroundColor === 'red' &&
-      booleanO1.style.backgroundColor === 'red' &&
-      booleanO2.style.backgroundColor === 'red' &&
-      booleanL.style.backgroundColor === 'red' &&
-      booleanE.style.backgroundColor === 'red' &&
-      booleanA.style.backgroundColor === 'red' &&
-      booleanN.style.backgroundColor === 'red'
+      booleanB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanN.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      booleanB.style.backgroundColor = 'green';
-      booleanO1.style.backgroundColor = 'green';
-      booleanO2.style.backgroundColor = 'green';
-      booleanL.style.backgroundColor = 'green';
-      booleanE.style.backgroundColor = 'green';
-      booleanA.style.backgroundColor = 'green';
-      booleanN.style.backgroundColor = 'green';
+      booleanB.style.backgroundColor = 'lightgreen';
+      booleanO1.style.backgroundColor = 'lightgreen';
+      booleanO2.style.backgroundColor = 'lightgreen';
+      booleanL.style.backgroundColor = 'lightgreen';
+      booleanE.style.backgroundColor = 'lightgreen';
+      booleanA.style.backgroundColor = 'lightgreen';
+      booleanN.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#boolean');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3526,23 +3549,23 @@ let generateNamesThree = () => {
   });
   // A
   booleanA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      booleanB.style.backgroundColor === 'red' &&
-      booleanO1.style.backgroundColor === 'red' &&
-      booleanO2.style.backgroundColor === 'red' &&
-      booleanL.style.backgroundColor === 'red' &&
-      booleanE.style.backgroundColor === 'red' &&
-      booleanA.style.backgroundColor === 'red' &&
-      booleanN.style.backgroundColor === 'red'
+      booleanB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanN.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      booleanB.style.backgroundColor = 'green';
-      booleanO1.style.backgroundColor = 'green';
-      booleanO2.style.backgroundColor = 'green';
-      booleanL.style.backgroundColor = 'green';
-      booleanE.style.backgroundColor = 'green';
-      booleanA.style.backgroundColor = 'green';
-      booleanN.style.backgroundColor = 'green';
+      booleanB.style.backgroundColor = 'lightgreen';
+      booleanO1.style.backgroundColor = 'lightgreen';
+      booleanO2.style.backgroundColor = 'lightgreen';
+      booleanL.style.backgroundColor = 'lightgreen';
+      booleanE.style.backgroundColor = 'lightgreen';
+      booleanA.style.backgroundColor = 'lightgreen';
+      booleanN.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#boolean');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3550,23 +3573,23 @@ let generateNamesThree = () => {
   });
   // N
   booleanN.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      booleanB.style.backgroundColor === 'red' &&
-      booleanO1.style.backgroundColor === 'red' &&
-      booleanO2.style.backgroundColor === 'red' &&
-      booleanL.style.backgroundColor === 'red' &&
-      booleanE.style.backgroundColor === 'red' &&
-      booleanA.style.backgroundColor === 'red' &&
-      booleanN.style.backgroundColor === 'red'
+      booleanB.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      booleanN.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      booleanB.style.backgroundColor = 'green';
-      booleanO1.style.backgroundColor = 'green';
-      booleanO2.style.backgroundColor = 'green';
-      booleanL.style.backgroundColor = 'green';
-      booleanE.style.backgroundColor = 'green';
-      booleanA.style.backgroundColor = 'green';
-      booleanN.style.backgroundColor = 'green';
+      booleanB.style.backgroundColor = 'lightgreen';
+      booleanO1.style.backgroundColor = 'lightgreen';
+      booleanO2.style.backgroundColor = 'lightgreen';
+      booleanL.style.backgroundColor = 'lightgreen';
+      booleanE.style.backgroundColor = 'lightgreen';
+      booleanA.style.backgroundColor = 'lightgreen';
+      booleanN.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#boolean');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3575,27 +3598,27 @@ let generateNamesThree = () => {
   // REMAINDER
   // R
   remainderR1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3603,27 +3626,27 @@ let generateNamesThree = () => {
   });
   // E
   remainderE1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3631,27 +3654,27 @@ let generateNamesThree = () => {
   });
   // M
   remainderM.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3659,27 +3682,27 @@ let generateNamesThree = () => {
   });
   // A
   remainderA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3687,27 +3710,27 @@ let generateNamesThree = () => {
   });
   // I
   remainderI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3715,27 +3738,27 @@ let generateNamesThree = () => {
   });
   // N
   remainderN.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3743,27 +3766,27 @@ let generateNamesThree = () => {
   });
   // D
   remainderD.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3771,27 +3794,27 @@ let generateNamesThree = () => {
   });
   // E
   remainderE2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3799,27 +3822,27 @@ let generateNamesThree = () => {
   });
   // R
   remainderR2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      remainderR1.style.backgroundColor === 'red' &&
-      remainderE1.style.backgroundColor === 'red' &&
-      remainderM.style.backgroundColor === 'red' &&
-      remainderA.style.backgroundColor === 'red' &&
-      remainderI.style.backgroundColor === 'red' &&
-      remainderN.style.backgroundColor === 'red' &&
-      remainderD.style.backgroundColor === 'red' &&
-      remainderE2.style.backgroundColor === 'red' &&
-      remainderR2.style.backgroundColor === 'red'
+      remainderR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderM.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderN.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderE2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      remainderR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      remainderR1.style.backgroundColor = 'green';
-      remainderE1.style.backgroundColor = 'green';
-      remainderM.style.backgroundColor = 'green';
-      remainderA.style.backgroundColor = 'green';
-      remainderI.style.backgroundColor = 'green';
-      remainderN.style.backgroundColor = 'green';
-      remainderD.style.backgroundColor = 'green';
-      remainderE2.style.backgroundColor = 'green';
-      remainderR2.style.backgroundColor = 'green';
+      remainderR1.style.backgroundColor = 'lightgreen';
+      remainderE1.style.backgroundColor = 'lightgreen';
+      remainderM.style.backgroundColor = 'lightgreen';
+      remainderA.style.backgroundColor = 'lightgreen';
+      remainderI.style.backgroundColor = 'lightgreen';
+      remainderN.style.backgroundColor = 'lightgreen';
+      remainderD.style.backgroundColor = 'lightgreen';
+      remainderE2.style.backgroundColor = 'lightgreen';
+      remainderR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#remainder');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3829,31 +3852,31 @@ let generateNamesThree = () => {
   // CONDITIONAL
   // C
   conditionalC.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3861,31 +3884,31 @@ let generateNamesThree = () => {
   });
   // O
   conditionalO1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3893,31 +3916,31 @@ let generateNamesThree = () => {
   });
   // N
   conditionalN1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3925,31 +3948,31 @@ let generateNamesThree = () => {
   });
   // D
   conditionalD.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3957,31 +3980,31 @@ let generateNamesThree = () => {
   });
   // I
   conditionalI1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -3989,31 +4012,31 @@ let generateNamesThree = () => {
   });
   // T
   conditionalT.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4021,31 +4044,31 @@ let generateNamesThree = () => {
   });
   // I
   conditionalI2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4053,31 +4076,31 @@ let generateNamesThree = () => {
   });
   // O
   conditionalO2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4085,31 +4108,31 @@ let generateNamesThree = () => {
   });
   // N
   conditionalN2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor ='green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor ='lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4117,31 +4140,31 @@ let generateNamesThree = () => {
   });
   // A
   conditionalA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4149,31 +4172,31 @@ let generateNamesThree = () => {
   });
   // L
   conditionalL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      conditionalC.style.backgroundColor === 'red' &&
-      conditionalO1.style.backgroundColor === 'red' &&
-      conditionalN1.style.backgroundColor === 'red' &&
-      conditionalD.style.backgroundColor === 'red' &&
-      conditionalI1.style.backgroundColor === 'red' &&
-      conditionalT.style.backgroundColor === 'red' &&
-      conditionalI2.style.backgroundColor === 'red' &&
-      conditionalO2.style.backgroundColor === 'red' &&
-      conditionalN2.style.backgroundColor === 'red' &&
-      conditionalA.style.backgroundColor === 'red' &&
-      conditionalL.style.backgroundColor === 'red'
+      conditionalC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalD.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalI2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalO2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalN2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      conditionalL.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      conditionalC.style.backgroundColor = 'green';
-      conditionalO1.style.backgroundColor = 'green';
-      conditionalN1.style.backgroundColor = 'green';
-      conditionalD.style.backgroundColor = 'green';
-      conditionalI1.style.backgroundColor = 'green';
-      conditionalT.style.backgroundColor = 'green';
-      conditionalI2.style.backgroundColor = 'green';
-      conditionalO2.style.backgroundColor = 'green';
-      conditionalN2.style.backgroundColor = 'green';
-      conditionalA.style.backgroundColor = 'green';
-      conditionalL.style.backgroundColor = 'green';
+      conditionalC.style.backgroundColor = 'lightgreen';
+      conditionalO1.style.backgroundColor = 'lightgreen';
+      conditionalN1.style.backgroundColor = 'lightgreen';
+      conditionalD.style.backgroundColor = 'lightgreen';
+      conditionalI1.style.backgroundColor = 'lightgreen';
+      conditionalT.style.backgroundColor = 'lightgreen';
+      conditionalI2.style.backgroundColor = 'lightgreen';
+      conditionalO2.style.backgroundColor = 'lightgreen';
+      conditionalN2.style.backgroundColor = 'lightgreen';
+      conditionalA.style.backgroundColor = 'lightgreen';
+      conditionalL.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#conditional');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4182,25 +4205,25 @@ let generateNamesThree = () => {
   // FUNCTION
   // F
   functionF.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4208,25 +4231,25 @@ let generateNamesThree = () => {
   });
   // U
   functionU.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4234,25 +4257,25 @@ let generateNamesThree = () => {
   });
   // N
   functionN1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4260,25 +4283,25 @@ let generateNamesThree = () => {
   });
   // C
   functionC.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4286,25 +4309,25 @@ let generateNamesThree = () => {
   });
   // T
   functionT.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4312,25 +4335,25 @@ let generateNamesThree = () => {
   });
   // I
   functionI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4338,25 +4361,25 @@ let generateNamesThree = () => {
   });
   // O
   functionO.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4364,25 +4387,25 @@ let generateNamesThree = () => {
   });
   // N
   functionN2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      functionF.style.backgroundColor === 'red' &&
-      functionU.style.backgroundColor === 'red' &&
-      functionN1.style.backgroundColor === 'red' &&
-      functionC.style.backgroundColor === 'red' &&
-      functionT.style.backgroundColor === 'red' &&
-      functionI.style.backgroundColor === 'red' &&
-      functionO.style.backgroundColor === 'red' &&
-      functionN2.style.backgroundColor === 'red'
+      functionF.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionU.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionT.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      functionN2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      functionF.style.backgroundColor = 'green';
-      functionU.style.backgroundColor = 'green';
-      functionN1.style.backgroundColor = 'green';
-      functionC.style.backgroundColor = 'green';
-      functionT.style.backgroundColor = 'green';
-      functionI.style.backgroundColor = 'green';
-      functionO.style.backgroundColor = 'green';
-      functionN2.style.backgroundColor = 'green';
+      functionF.style.backgroundColor = 'lightgreen';
+      functionU.style.backgroundColor = 'lightgreen';
+      functionN1.style.backgroundColor = 'lightgreen';
+      functionC.style.backgroundColor = 'lightgreen';
+      functionT.style.backgroundColor = 'lightgreen';
+      functionI.style.backgroundColor = 'lightgreen';
+      functionO.style.backgroundColor = 'lightgreen';
+      functionN2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#function');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4391,19 +4414,19 @@ let generateNamesThree = () => {
   // CLASS
   // C
   classC.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      classC.style.backgroundColor === 'red' &&
-      classL.style.backgroundColor === 'red' &&
-      classA.style.backgroundColor === 'red' &&
-      classS1.style.backgroundColor === 'red' &&
-      classS2.style.backgroundColor === 'red'
+      classC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      classC.style.backgroundColor = 'green';
-      classL.style.backgroundColor = 'green';
-      classA.style.backgroundColor = 'green';
-      classS1.style.backgroundColor = 'green';
-      classS2.style.backgroundColor = 'green';
+      classC.style.backgroundColor = 'lightgreen';
+      classL.style.backgroundColor = 'lightgreen';
+      classA.style.backgroundColor = 'lightgreen';
+      classS1.style.backgroundColor = 'lightgreen';
+      classS2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#class');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4411,19 +4434,19 @@ let generateNamesThree = () => {
   });
   // L
   classL.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      classC.style.backgroundColor === 'red' &&
-      classL.style.backgroundColor === 'red' &&
-      classA.style.backgroundColor === 'red' &&
-      classS1.style.backgroundColor === 'red' &&
-      classS2.style.backgroundColor === 'red'
+      classC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      classC.style.backgroundColor = 'green';
-      classL.style.backgroundColor = 'green';
-      classA.style.backgroundColor = 'green';
-      classS1.style.backgroundColor = 'green';
-      classS2.style.backgroundColor = 'green';
+      classC.style.backgroundColor = 'lightgreen';
+      classL.style.backgroundColor = 'lightgreen';
+      classA.style.backgroundColor = 'lightgreen';
+      classS1.style.backgroundColor = 'lightgreen';
+      classS2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#class');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4431,19 +4454,19 @@ let generateNamesThree = () => {
   });
   // A
   classA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      classC.style.backgroundColor === 'red' &&
-      classL.style.backgroundColor === 'red' &&
-      classA.style.backgroundColor === 'red' &&
-      classS1.style.backgroundColor === 'red' &&
-      classS2.style.backgroundColor === 'red'
+      classC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      classC.style.backgroundColor = 'green';
-      classL.style.backgroundColor = 'green';
-      classA.style.backgroundColor = 'green';
-      classS1.style.backgroundColor = 'green';
-      classS2.style.backgroundColor = 'green';
+      classC.style.backgroundColor = 'lightgreen';
+      classL.style.backgroundColor = 'lightgreen';
+      classA.style.backgroundColor = 'lightgreen';
+      classS1.style.backgroundColor = 'lightgreen';
+      classS2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#class');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4451,19 +4474,19 @@ let generateNamesThree = () => {
   });
   // S
   classS1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      classC.style.backgroundColor === 'red' &&
-      classL.style.backgroundColor === 'red' &&
-      classA.style.backgroundColor === 'red' &&
-      classS1.style.backgroundColor === 'red' &&
-      classS2.style.backgroundColor === 'red'
+      classC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      classC.style.backgroundColor = 'green';
-      classL.style.backgroundColor = 'green';
-      classA.style.backgroundColor = 'green';
-      classS1.style.backgroundColor = 'green';
-      classS2.style.backgroundColor = 'green';
+      classC.style.backgroundColor = 'lightgreen';
+      classL.style.backgroundColor = 'lightgreen';
+      classA.style.backgroundColor = 'lightgreen';
+      classS1.style.backgroundColor = 'lightgreen';
+      classS2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#class');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4471,19 +4494,19 @@ let generateNamesThree = () => {
   });
   // S
   classS2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      classC.style.backgroundColor === 'red' &&
-      classL.style.backgroundColor === 'red' &&
-      classA.style.backgroundColor === 'red' &&
-      classS1.style.backgroundColor === 'red' &&
-      classS2.style.backgroundColor === 'red'
+      classC.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classL.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      classS2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      classC.style.backgroundColor = 'green';
-      classL.style.backgroundColor = 'green';
-      classA.style.backgroundColor = 'green';
-      classS1.style.backgroundColor = 'green';
-      classS2.style.backgroundColor = 'green';
+      classC.style.backgroundColor = 'lightgreen';
+      classL.style.backgroundColor = 'lightgreen';
+      classA.style.backgroundColor = 'lightgreen';
+      classS1.style.backgroundColor = 'lightgreen';
+      classS2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#class');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4492,25 +4515,25 @@ let generateNamesThree = () => {
   //ITERATOR
   // I
   iteratorI.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor = 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4518,25 +4541,25 @@ let generateNamesThree = () => {
   });
   // T
   iteratorT1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor = 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4544,25 +4567,25 @@ let generateNamesThree = () => {
   });
   // E
   iteratorE.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor === 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor === 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4570,25 +4593,25 @@ let generateNamesThree = () => {
   });
   // R
   iteratorR1.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor = 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4596,25 +4619,25 @@ let generateNamesThree = () => {
   });
   // A
   iteratorA.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor = 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4622,25 +4645,25 @@ let generateNamesThree = () => {
   });
   // T
   iteratorT2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor = 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4648,25 +4671,25 @@ let generateNamesThree = () => {
   });
   // O
   iteratorO.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor = 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');
@@ -4674,25 +4697,25 @@ let generateNamesThree = () => {
   });
   // R
   iteratorR2.addEventListener('click', (event) => {
-    event.target.style.backgroundColor = 'red';
+    event.target.style.backgroundColor = 'rgb(255, 214, 186)';
     if (
-      iteratorI.style.backgroundColor === 'red' &&
-      iteratorT1.style.backgroundColor === 'red' &&
-      iteratorE.style.backgroundColor === 'red' &&
-      iteratorR1.style.backgroundColor === 'red' &&
-      iteratorA.style.backgroundColor === 'red' &&
-      iteratorT2.style.backgroundColor === 'red' &&
-      iteratorO.style.backgroundColor === 'red' &&
-      iteratorR2.style.backgroundColor === 'red'
+      iteratorI.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorE.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR1.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorA.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorT2.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorO.style.backgroundColor === 'rgb(255, 214, 186)' &&
+      iteratorR2.style.backgroundColor === 'rgb(255, 214, 186)'
     ) {
-      iteratorI.style.backgroundColor = 'green';
-      iteratorT1.style.backgroundColor = 'green';
-      iteratorE.style.backgroundColor = 'green';
-      iteratorR1.style.backgroundColor = 'green';
-      iteratorA.style.backgroundColor = 'green';
-      iteratorT2.style.backgroundColor = 'green';
-      iteratorO.style.backgroundColor = 'green';
-      iteratorR2.style.backgroundColor = 'green';
+      iteratorI.style.backgroundColor = 'lightgreen';
+      iteratorT1.style.backgroundColor = 'lightgreen';
+      iteratorE.style.backgroundColor = 'lightgreen';
+      iteratorR1.style.backgroundColor = 'lightgreen';
+      iteratorA.style.backgroundColor = 'lightgreen';
+      iteratorT2.style.backgroundColor = 'lightgreen';
+      iteratorO.style.backgroundColor = 'lightgreen';
+      iteratorR2.style.backgroundColor = 'lightgreen';
       let strike = document.querySelector('#iterator');
       strike.classList.remove('biggerFont');
       strike.classList.add('biggerFontandStrikethrough');

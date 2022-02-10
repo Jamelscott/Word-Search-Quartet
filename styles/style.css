@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 /* BUTTON TEXT */
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
+/* word line text */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 :ROOT{
-    --Allbackgrounds: #CDB699;
+    --Allbackgrounds: white;
 }
 *{
     text-align: center;
@@ -14,10 +15,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffd6ba;
-    border: 10px solid #555b6e;
+    background-color: #89b0ae;
+    border: 10px solid #48494c;
     width: 1300px;
     margin: 2em auto; 
+    border-radius: 10px;
 
 }
 
@@ -38,24 +40,25 @@ body{
     height: 465px;
     margin-top: 2em;
     margin-right: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     display: flex;
     flex-wrap: wrap;
 }
 
 #container-aLevelTwo {
     width: 520px;
-    height: 690px;
+    height: 700px;
     margin-top: 2em;
     margin-right: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+    margin-left: 2em;
     display: flex;
     flex-wrap: wrap;
 }
 
 #container-aLevelThree {
     width: 685px;
-    height: 1000px;
+    height: 775px;
     margin-top: 2em;
     margin-right: 2em;
     margin-bottom: 3.5em;
@@ -67,12 +70,13 @@ body{
     /* display: flex;
     flex-direction: column;
     justify-content: center; */
-    width: 500px;
+    width: 400px;
+    height: 100%;
     margin-top: 2em;
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: bolder;
     margin-left: 2em;
+    margin-bottom: 2em;
 }
 
 /* header style=ing */
@@ -97,9 +101,13 @@ body{
     height: 3.5em;
     width: 3.5em;
     /* background-color: rgba(190, 132, 132, 0.603); */
-    background-color: white;
+    background-color: #f7f7f7;
     cursor: pointer;
-    
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+}
+.singleBlockTestLevelOne:hover{
+    background-color: #ffd6ba;
 }
 .singleBlockLevelOne{
     display: flex;
@@ -108,9 +116,13 @@ body{
     border: 1px solid black;
     height: 3.5em;
     width: 3.5em;
-    background-color: white;
+    background-color: #f7f7f7;
     cursor: pointer;
-    
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+}
+.singleBlockLevelOne:hover{
+    background-color: #ffd6ba;
 }
 .singleBlockTestLevelTwo{
     display: flex;
@@ -119,10 +131,13 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    /* background-color: rgba(190, 132, 132, 0.603); */
-    background-color: white;
+    /* background-color: #f7f7f7; */
+    background-color: #ffd6ba;
     cursor: pointer;
     
+}
+.singleBlockTestLevelTwo:hover{
+    background-color: #ffd6ba;
 }
 
 .singleBlockLevelTwo {
@@ -132,9 +147,12 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    background-color: white;
+    background-color: #f7f7f7;
     cursor: pointer;
     
+}
+.singleBlockLevelTwo:hover{
+    background-color: #ffd6ba;
 }
 
 .singleBlockLevelThree{
@@ -144,10 +162,14 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    background-color: white;
+    background-color: #f7f7f7;
     cursor: pointer;
 
 }
+.singleBlockLevelThree:hover{
+    background-color: #ffd6ba;
+}
+
 
 .singleBlockTestLevelThree{
     display: flex;
@@ -156,25 +178,31 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    /* background-color: rgba(190, 132, 132, 0.603); */
-    background-color: white;
+    /* background-color: #f7f7f7; */
+    background-color: #ffd6ba;
     cursor: pointer;
     
 }
+.singleBlockTestLevelThree:hover{
+    background-color: #ffd6ba;
+}
  #word-box{
-     margin-top: 4em;
-     font-family: 'Fredoka One', cursive;
-     color: #89b0ae;
-     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
- 
-
+     height: 300;
+     margin-top: 2em;
+     font-family: 'Roboto Slab', serif;
+     color: #fd0000;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
  }
  #timer-box{ 
+    font-family: 'Roboto Slab', serif;
+     height: 20%;
      margin: 0 auto;
      height: 150px ;
      width: 350px;
+     padding-bottom: 1em;
      border: 1px solid black;
-     background-color: rgb(255, 248, 240);
+     background-color: #ffd6ba;
  }
 
 /* single attributes */
@@ -184,15 +212,15 @@ body{
 
 .biggerFont{
     font-size: 22px;
-    margin-top: 1.75em;
-    margin-bottom: 1.75em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 .biggerFontandStrikethrough{
     font-size: 22px;
     text-decoration: line-through;
     color: grey;
-    margin-top: 1.75em;
-    margin-bottom: 1.75em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .background-select {
@@ -237,7 +265,7 @@ body{
     display: inline;
     color: #89b0ae;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
+    margin-bottom: 10px;
 }
 
 #header-div{
@@ -247,6 +275,7 @@ body{
     gap: 50px;
     background-color: white;
     width: 1300px;
+    padding-top: 1em;
 }
 #icon{
     height: 200px;
@@ -264,13 +293,13 @@ body{
     margin-right: 1em;
     text-align: center;
     white-space: normal;
-    color: #bee3db;
+    color: #89b0ae;
     stroke-width: 1px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
 }
 .menu-button:hover{
-background-color: #bee3db;
+background-color: #89b0ae;
 color: #ffd6ba;
 
 
@@ -288,9 +317,9 @@ color: #ffd6ba;
     font-family: 'Fredoka One', cursive;
     background-color: rgb(204, 200, 200);
     border-radius: 10px;
+    margin-top: .5em;
     margin-left: 1em;
     margin-right: 1em;
-    margin-bottom: 1em;
     text-align: center;
 }
 #returntoMainButton:hover{
@@ -317,8 +346,46 @@ color: #ffd6ba;
 }
 
 #header{
+    font-size: 50px;
     font-family: 'Fredoka One', cursive;
     color: #89b0ae;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
+}
+
+#rules-box{
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;;
+    font-size: 20px;
+}
+.rules-text{
+    margin: .5em;
+    font-size: 20px;
+    color: #48494c
+}
+
+#difficulty-text{
+    font-size: 40px;
+    color: #89b0ae;
+    font-family: 'Fredoka One', cursive;;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border: 5px solid #48494c;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#rules-text{
+    text-decoration: underline;
+    font-size: 22px;
+    margin-bottom: .5em;
+
+}
+
+img{
+    display: hidden;
+    margin: 1em 0;
 }
