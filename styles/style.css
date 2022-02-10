@@ -37,7 +37,7 @@ body{
 
 #container-aLevelOne {
     width: 466px;
-    height: 465px;
+    height: 440px;
     margin-top: 2em;
     margin-right: 2em;
     margin-bottom: 3em;
@@ -47,10 +47,10 @@ body{
 
 #container-aLevelTwo {
     width: 520px;
-    height: 700px;
+    height: 650px;
     margin-top: 2em;
     margin-right: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     margin-left: 2em;
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +100,6 @@ body{
     border: 1px solid black;
     height: 3.5em;
     width: 3.5em;
-    /* background-color: rgba(190, 132, 132, 0.603); */
     background-color: #f7f7f7;
     cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
@@ -131,8 +130,10 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    /* background-color: #f7f7f7; */
-    background-color: #ffd6ba;
+    background-color: #f7f7f7;
+    /* background-color: #ffd6ba; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
     cursor: pointer;
     
 }
@@ -148,6 +149,8 @@ body{
     height: 2em;
     width: 2em;
     background-color: #f7f7f7;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
     cursor: pointer;
     
 }
@@ -163,6 +166,8 @@ body{
     height: 2em;
     width: 2em;
     background-color: #f7f7f7;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
     cursor: pointer;
 
 }
@@ -178,8 +183,10 @@ body{
     border: 1px solid black;
     height: 2em;
     width: 2em;
-    /* background-color: #f7f7f7; */
-    background-color: #ffd6ba;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    background-color: #f7f7f7;
+    /* background-color: #ffd6ba; */
     cursor: pointer;
     
 }
