@@ -1,5 +1,5 @@
 // LEVEL BREEZY   --------------------------------------->
-// THIS CREATES THE BOARD
+// THIS CREATES THE BOARD/LAYOUT
 const startGameLevelOne = () => {
   // everything in the header
   let headerContainer = document.createElement('div');
@@ -84,7 +84,6 @@ const startGameLevelOne = () => {
       document.querySelector('#button-div').style.removeProperty('display');
       document.querySelector('#header-div').style.removeProperty('display');
       document.getElementById('returntoMainButton').remove();
-
       document.getElementById('header-container').remove();
       document.getElementById('main-container').remove();
       if (document.querySelector('#breezy-status').innerText === "complete!" && document.querySelector('#tricky-status').innerText === "complete!" && document.querySelector('#tough-status').innerText === "complete!"){
@@ -162,7 +161,7 @@ const startGameLevelOne = () => {
   let oneMinTimer = setInterval(timerMinusOne, 1000);
 };
 
-// GENERATE LETTERS ON BOARD
+// GENERATE WORDS
 let generateNamesOne = () => {
   //APPLE SETUP
   let sailS = document.getElementById('2');
@@ -651,7 +650,7 @@ let generateNamesOne = () => {
 // LEVEL BREEZY   --------------------------------------->
 
 // LEVEL TRICKY   --------------------------------------->
-// THIS CREATES THE BOARD
+// THIS CREATES THE BOARD/LAYOUT
 const startGameLevelTwo = () => {
   // everything in the header
   let headerContainer = document.createElement('div');
@@ -845,7 +844,7 @@ const startGameLevelTwo = () => {
   let oneMinTimer = setInterval(timerMinusOne, 1000);
 };
 
-// GENERATE LETTERS ON BOARD
+// GENERATE WORDS
 let generateNamesTwo = () => {
   //APPLE SETUP
   let appleA = document.getElementById('105');
@@ -2269,7 +2268,7 @@ let generateNamesTwo = () => {
 // LEVEL TRICKY   --------------------------------------->
 
 // LEVEL TOUGH   --------------------------------------->
-// THIS CREATES THE BOARD
+// THIS CREATES THE BOARD/LAYOUT
 const startGameLevelThree = () => {
   // everything in the header
   let headerContainer = document.createElement('div');
@@ -2421,29 +2420,29 @@ const startGameLevelThree = () => {
         
       }
 
-      // CHANGE TEXT AT MAIN MENU DEPENDING ON COLOR
     });
-  // GENERATE BOARD
-  let alphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
-  let alphabetArray = alphabet.split(' ');
-
-  for (let i = 0; i < 460; i++) {
-    let numberGen = Math.floor(Math.random() * 26);
-
-    let singleBlock = document.createElement('div');
-    singleBlock.classList.add('singleBlockLevelThree');
-    singleBlock.innerText = alphabetArray[numberGen];
-    singleBlock.setAttribute('id', i);
-    containerA.appendChild(singleBlock);
-  }
-
-  // TIMER
-
-  let countdownStart = 301;
-  let timerMinusOne = () => {
-    countdownStart--;
-    timer.innerText = countdownStart + 'sec';
-
+    // GENERATE BOARD
+    let alphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
+    let alphabetArray = alphabet.split(' ');
+    
+    for (let i = 0; i < 460; i++) {
+      let numberGen = Math.floor(Math.random() * 26);
+      
+      let singleBlock = document.createElement('div');
+      singleBlock.classList.add('singleBlockLevelThree');
+      singleBlock.innerText = alphabetArray[numberGen];
+      singleBlock.setAttribute('id', i);
+      containerA.appendChild(singleBlock);
+    }
+    
+    // TIMER
+    
+    let countdownStart = 301;
+    let timerMinusOne = () => {
+      countdownStart--;
+      timer.innerText = countdownStart + 'sec';
+      
+      // CHANGE TEXT AT MAIN MENU DEPENDING ON COLOR
     if (countdownStart === 0) {
       let b = "BREEZY"
       clearInterval(oneMinTimer);
@@ -2479,7 +2478,7 @@ const startGameLevelThree = () => {
   let oneMinTimer = setInterval(timerMinusOne, 1000);
 };
 
-// GENERATE LETTERS ON BOARD
+// GENERATE WORDS
 let generateNamesThree = () => {
   //ARRAY SETUP
   let arrayA1 = document.getElementById('106');
@@ -4772,41 +4771,7 @@ let generateNamesThree = () => {
 };
 // LEVEL TOUGH   --------------------------------------->
 
-// test test test test test
-// let elem = document.createElement('button');
-// elem.setAttribute('id', 'test');
-// elem.innerText = 'testing';
-// document.body.appendChild(elem);
-
-// window.addEventListener("DOMContentLoaded", ()=>{
-
-//   document.getElementById("vid").style.display = "none"
-
-// })
-// elem.addEventListener("click", function(){
-  
-//     let videoAte = document.createElement("div")
-//     videoAte.style.width = "480px"
-//     videoAte.style.marginBottom = ".5em"
-//     let iFrame = document.createElement("iFrame")
-//     iFrame.setAttribute("allow", "fullscreen")
-//     iFrame.setAttribute("frameBorder", "0")
-//     iFrame.setAttribute("height", "270")
-//     iFrame.setAttribute("src","https://giphy.com/embed/xU7TNYYXP2UWnYUqPC/video")
-//     iFrame.setAttribute("width", "480")
-//     document.getElementById("vid").appendChild(iFrame)
-//     let winText = document.createElement("p")
-//     winText.innerText = "🏆 YOU DID IT! 🏆"
-//     winText.className = "rules-text"
-//     winText.style.color = "black"
-//     document.getElementById("vid").appendChild(winText)
-    
-    
-// })
-
-// 54 is the total num of letters
-
-// INITIATE LEVEL TWO PROMPT
+// INITIATE LEVEL PROMPT
 let startLevel3 = document.querySelector('#startLevel3');
 startLevel3.addEventListener('click', function () {
   document.querySelector('#button-div').style.display = 'none';
