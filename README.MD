@@ -1,16 +1,23 @@
 # WordSeach Countdown
-
 ## Elevator Pitch
 
 Welcome to WordSearch Countdown. There are three wordsearch puzzles to play but you will only get credit for completing the levels if you do it within the time-limit. Be warned, the levels get harder as you make your way through the breezy, tricky and tough difficulties. Your progress will be kept on the main screen in case you've forgotten which levels you've completed.
+
+## Play here
+https://jamelscott.github.io/WordSearch-Countdown/
+
 
 ## Tech stack
 
 * HTML/CSS/Vanilla JS
 
-## Quick Sketch
+## initial concept
+![Here is the initial concept](https://i.ibb.co/ByQLW71/IMG-5564-1-20.jpg)
 
-[Here is the initial concept](https://i.ibb.co/8XJBKz8/IMG-5564.jpg)
+## Finnishes results
+![main menu](https://i.ibb.co/xShmWWw/w1.png)
+![breezylevel](https://i.ibb.co/pZFQNTn/w2.png)
+![main menu after progression](https://i.ibb.co/bgwnJs6/w3.png)
 
 ## MVP Goals
 
@@ -48,6 +55,80 @@ Welcome to WordSearch Countdown. There are three wordsearch puzzles to play but 
 ## Code Highlights
 
 * good use of hidding and/or removing objects in the DOM to seemlessly move beeen gameboards and main menu
+```
+// RETURN TO MAIN MENU
+  document
+    .getElementById('returntoMainButton')
+    .addEventListener('click', () => {
+      document.querySelector('#button-div').style.removeProperty('display');
+      document.querySelector('#header-div').style.removeProperty('display');
+      document.getElementById('returntoMainButton').remove();
+
+      document.getElementById('header-container').remove();
+      document.getElementById('main-container').remove();
+      if (document.querySelector('#breezy-status').innerText === "complete!" && document.querySelector('#tricky-status').innerText === "complete!" && document.querySelector('#tough-status').innerText === "complete!"){
+        let videoAte = document.createElement("div")
+        videoAte.style.width = "480px"
+        videoAte.style.marginBottom = ".5em"
+        let iFrame = document.createElement("iFrame")
+        iFrame.setAttribute("allow", "fullscreen")
+        iFrame.setAttribute("frameBorder", "0")
+        iFrame.setAttribute("height", "270")
+        iFrame.setAttribute("src","https://giphy.com/embed/xU7TNYYXP2UWnYUqPC/video")
+        iFrame.setAttribute("width", "480")
+        document.getElementById("vid").appendChild(iFrame)
+        let winText = document.createElement("p")
+        winText.innerText = "🏆 YOU DID IT! 🏆"
+        winText.className = "rules-text"
+        winText.style.color = "black"
+        document.getElementById("vid").appendChild(winText)
+        document.getElementById("rules-box").style.display = "none"
+
+        
+      }
+```
+```
+
+    // TIMER
+    
+    let countdownStart = 301;
+    let timerMinusOne = () => {
+      countdownStart--;
+      timer.innerText = countdownStart + 'sec';
+      
+      // CHANGE TEXT AT MAIN MENU DEPENDING ON COLOR
+    if (countdownStart === 0) {
+      let b = "BREEZY"
+      clearInterval(oneMinTimer);
+      document
+        .getElementById('returntoMainButton')
+        .classList.remove('button-invisible');
+      document
+        .getElementById('returntoMainButton')
+        .classList.add('button-visible');
+      timer.innerText = '😢You lost!😢';
+      document.querySelector('#startLevel3').style.backgroundColor = 'yellow';
+      document.querySelector('#tough-status').innerText = "try again";
+    }
+
+    if (
+      document.querySelectorAll('.biggerFontandStrikethrough').length === 12
+    ) {
+      clearInterval(oneMinTimer);
+
+      document
+        .getElementById('returntoMainButton')
+        .classList.remove('button-invisible');
+      document
+        .getElementById('returntoMainButton')
+        .classList.add('button-visible');
+      timer.innerText = '🏆You won!🏆';
+      document.querySelector('#startLevel3').style.backgroundColor =
+        'lightgreen';
+      document.querySelector('#tough-status').innerText = "complete!"
+    }
+  };
+```
 
 ## Ongoing bugs
 
