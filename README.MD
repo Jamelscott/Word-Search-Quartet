@@ -9,15 +9,17 @@ https://jamelscott.github.io/WordSearch-Countdown/
 
 ## Tech stack
 
-* HTML/CSS/Vanilla JS
-
-## initial concept
-![Here is the initial concept](https://i.ibb.co/ByQLW71/IMG-5564-1-20.jpg)
+* HTML
+* CSS
+* JavaScript
 
 ## Finnishes results
 ![main menu](https://i.ibb.co/xShmWWw/w1.png)
 ![breezylevel](https://i.ibb.co/pZFQNTn/w2.png)
 ![main menu after progression](https://i.ibb.co/bgwnJs6/w3.png)
+
+## initial concept
+![Here is the initial concept](https://i.ibb.co/ByQLW71/IMG-5564-1-20.jpg)
 
 ## MVP Goals
 
@@ -54,7 +56,7 @@ https://jamelscott.github.io/WordSearch-Countdown/
 
 ## Code Highlights
 
-* good use of hidding and/or removing objects in the DOM to seemlessly move beeen gameboards and main menu
+* Manipulating the DOM to seemlessly move beeen gameboards and main menu
 ```
 // RETURN TO MAIN MENU
   document
@@ -87,6 +89,7 @@ https://jamelscott.github.io/WordSearch-Countdown/
         
       }
 ```
+* Setting timers with the use of setInterval which are cleared if all words are or are not found in time.
 ```
 
     // TIMER
